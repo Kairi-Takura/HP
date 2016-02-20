@@ -1,0 +1,99 @@
+// content
+%div#content
+  %div#content_category-bar
+    // 施工中
+
+  %div#content_all.row
+    %div#content_main.col-md-8.col-sm-12
+      %section#content_section.visible-lg.visible-md
+        <?php query_posts('posts_per_page=1') ?>
+        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        %article.content_article.content_article-first
+          %a{:href => "<?php echo get_permalink(); ?>"}
+            %div.content_article-all.content_article-all-first
+              <?php the_post_thumbnail('lsize'); ?>
+              <?php
+              $cats = get_the_category();
+              $cats = $cats[0];
+              ?>
+              <p class="content_article-category <?php echo $cats->category_nicename; ?>"> <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+              %div.content_article-content
+                %div.content_article-name <?php the_modified_author(); ?>
+                %p.content_article-date
+                  <?php
+                  $days = 2;
+                  $today = date_i18n('U');
+                  $entry = get_the_time('U');
+                  $elapsed = date('U',($today - $entry)) / 86400;
+                  if( $days > $elapsed ){
+                  echo '<span class="new">New</span>';
+                  }
+                  ?>
+                  %time.content_article-time{datetime: "<?php echo get_the_date();?>"} <?php echo get_the_date();?>
+                %h1.content_article-title <?php the_title(); ?>
+                %div.content_article-warp
+              %figcaption.content_article-overlay
+                // Maybe...
+        <?php endwhile; endif; ?>
+
+        <?php query_posts('posts_per_page=18&offset=1') ?>
+        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        %article.content_article.content_article-other
+          %a{:href => "/"}
+            %div.content_article-all.content_article-all-half
+              <?php the_post_thumbnail('lsize'); ?>
+              <?php
+              $cats = get_the_category();
+              $cats = $cats[0];
+              ?>
+              <p class="content_article-category content_article-category-half <?php echo $cats->category_nicename; ?>"> <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+              %div.content_article-content.content_article-content-other
+                %div.content_article-name.content_article-name-half <?php the_modified_author(); ?>
+                %p.content_article-date.content_article-date-half
+                  <?php
+                  $days = 2;
+                  $today = date_i18n('U');
+                  $entry = get_the_time('U');
+                  $elapsed = date('U',($today - $entry)) / 86400;
+                  if( $days > $elapsed ){
+                  echo '<span class="new new-half">New</span>';
+                  }
+                  ?>
+                  %time.content_article-time.content_article-time-half{datetime: "<?php echo get_the_date();?>"} <?php echo get_the_date();?>
+                %h1.content_article-title.content_article-title-half <?php the_title(); ?>
+                %div.content_article-warp
+              %figcaption.content_article-overlay.content_article-overlay-half
+        <?php endwhile; endif; ?>
+
+
+      %section#content_section.visible-xs.visible-sm
+        <?php query_posts('posts_per_page=18') ?>
+        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        %article.content_article.content_article_mini
+          %a{:href => "/"}
+            %div.content_article-all.row.content_article-all_mini
+              %div.content_article-img-all.content_article-img-all_mini
+                %p.content_article-img-all-in <?php the_post_thumbnail('ssize'); ?>
+                <?php
+                $cats = get_the_category();
+                $cats = $cats[0];
+                ?>
+              <p class=" content_article-category content_article-category-half <?php echo $cats->category_nicename; ?>"> <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+              %div.content_article-content_mini
+                %div.content_article-name_mini <?php the_modified_author(); ?>
+                %p
+                  %time.content_article-time_mini{datetime: "<?php echo get_the_date();?>"} <?php echo get_the_date();?>
+                  <?php
+                  $days = 2;
+                  $today = date_i18n('U');
+                  $entry = get_the_time('U');
+                  $elapsed = date('U',($today - $entry)) / 86400;
+                  if( $days > $elapsed ){
+                  echo '<span class="new new_mini">New</span>';
+                  }
+                  ?>
+                %h1.content_article-title_mini <?php the_title(); ?>
+        <?php endwhile; endif; ?>
+
+    / sidebar
+    = Haml::Engine.new(File.read("sidebar.haml")).render

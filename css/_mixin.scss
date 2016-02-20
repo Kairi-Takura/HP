@@ -1,0 +1,63 @@
+// Color
+// Main Color
+$logz-color: #4087c7;
+$white: #fff;
+
+// Category
+// おもしろ
+$fun: red;
+// 教育
+$education: #FFA8FF;
+// 福祉
+$welfare: #fc8d00;
+
+// New color
+.new{
+  color: $logz-color;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 1px 4px;
+  font-size: 1.21rem;
+}
+.new-half{
+  font-size: 1.0rem;
+}
+.new_mini{
+  font-size: 0.8rem;;
+  color: $white;
+  background-color: $logz-color;
+  float: right;
+  margin-right: 8px;
+}
+.screen-reader-text{
+  display: none;
+}
+
+// Xs,Smのbackground-color
+$xs_sm_background-color: #fff;
+
+// Contentのimgの大きさ
+@mixin content_img-size($width: 100%, $height: 35%) {
+  width: $width;
+  height: $height;
+}
+// Contentのコンテンツ(absolute)
+@mixin content_absolute($left: 0, $bottom: 0) {
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+}
+
+// Body
+body, #content:before{
+  background-attachment: fixed;
+  background-image: url("http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_4010.jpg");
+  background-size: cover;
+  background-repeat: repeat-x;
+  @media screen and (max-width: 1203px){
+    width:1203px;
+  }
+  @media screen and (max-width: 990px){
+    width:100% !important;
+  }
+}

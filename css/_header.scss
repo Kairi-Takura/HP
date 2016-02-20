@@ -1,0 +1,217 @@
+/*
+Theme Name: LOGZhp
+Theme URI: http://logz.co.jp/
+Author: Kairi Takura
+Author URI: http://logz.co.jp/
+Description: LOGZhp
+Version: 1.0
+*/
+
+@import "mixin";
+.sample{background: #ddd}
+
+header{
+  padding-bottom: 400px;
+  .header_description{
+    background-color: $logz-color;
+    color:$white;
+    text-align: center;
+    border-bottom: $white 1px solid;
+    box-sizing: border-box;
+    padding:{
+      top:5px;
+      bottom:5px;
+    }
+    width:100%;
+    @media screen and (max-width: 350px){
+      font-size: 0.9rem;
+      height:28px;
+    }
+    @media screen and (max-width: 1203px){
+      width:1203px;
+    }
+    @media screen and (max-width: 992px){
+      width:100%;
+      position: fixed;
+      z-index: 9999;
+    }
+  }
+
+  .header_navbar{
+    border-bottom: 4px solid $logz-color;
+    box-sizing: border-box;
+    @media screen and (max-width: 1203px){
+      width:1203px;
+    }
+    @media screen and (max-width: 992px){
+      width:100%;
+      position: fixed;
+      margin-top: 28px;
+      z-index: 9999;
+    }
+      .header_navbar-img{
+        height: 70%;
+        margin-top: 12px;
+        &:active, &:focus{
+          background: rgba(64,135,199,.4);
+          border-radius: 5px;
+        }
+        @media screen and (max-width: 881px){
+          height:50%;
+          margin-top:16px;
+          margin-left:15px;
+        }
+        @media screen and (max-width: 767px){
+          margin-top:10.5px;
+        }
+    }
+    .sidebar_phone-size_slide{
+      float: right;
+      .sidebar_phone-size_btn-menu{
+        a{
+          &:hover .sidebar_phone-size_btn-icon, &:active .sidebar_phone-size_btn-icon, &:focus .sidebar_phone-size_btn-icon{
+            background-color: $logz-color;
+            color: #fff;
+          }
+          .sidebar_phone-size_btn-icon{
+            border: 1px solid;
+            padding: 6px 8.26px;
+            border-radius: 4px;
+            font-size: 1.4rem;
+            margin-top: 16px;
+            margin-right: 15px;
+            @media screen and (max-width: 767px){
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 882px){
+        display: none;
+      }
+    }
+    @media screen and (max-width:881px){
+      .header_navbar-main{
+        width:100%;
+        button{
+          &:hover i, &:active i, &:focus i{
+            background-color: $logz-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .menu-header-container{
+      width:100%;
+      .menu{
+        @media screen and (max-width:881px){
+          width:100%;
+          & li{
+            float:none;
+            border-bottom: solid $logz-color 1.5px;
+          }
+          & li:last-child{
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .menu-item{
+    a{
+      transition: all .4s ease;
+      font-size: 1.0rem;
+      text-align: center;
+      .fa{
+        display: block;
+        font-size: 1.8rem;
+        @media screen and (max-width: 767px){
+          display: inline-block;
+        }
+      }
+      .fontawesome-text{
+        display: inline-block;
+        font-size: 1.1rem;
+        margin-top:4px;
+        @media screen and (max-width: 961px){
+          font-size: 0.9rem;
+        }
+        @media screen and (max-width: 767px){
+          margin-left: 15px;
+          font-size: 1.0rem;
+        }
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        transform: scaleX(0);
+        background-color: $white;
+        transition: all .6s ease;
+        border-radius: 7px;
+      }
+      &:hover, &:active, &:focus{
+        text-decoration: none;
+        border-radius: 7px;
+        background-color: $logz-color !important;
+        color: $white !important;
+        transition: all .4s ease;
+        box-shadow: inset 0 0 8px rgba(255, 255, 255, .5), 0 0 8px rgba(255, 255, 255, .2);
+        &:after {
+          transform: scaleX(1);
+        }
+      }
+      .header_navbar-icon{
+        display: inline;
+      }
+    }
+  }
+}
+.sidebar_phone-size_slide-menu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: $logz-color;
+    text-align: center;
+    overflow: auto;
+    transition: .5s ease;
+    .sidebar_phone-size_slide-list{
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      .sidebar_phone-size_slide-item{
+        position: absolute;
+        bottom: -90%;
+        left: 5%;
+        height: 100%;
+        .btnClose{
+          color: $white;
+          padding: 33.7px 15px;
+          border-radius: 50%;
+          border: solid $white 2px;
+          &:active, &:focus, &:hover{
+            background-color: $white;
+            color: $logz-color;
+            border: solid $logz-color 2px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+}
+.shade{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #333;
+    background-color: rgba(0,0,0,.5);
+}

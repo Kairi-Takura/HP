@@ -1,0 +1,28 @@
+/ Memo !important
+/ header,footerなどの一番の親要素のクラス名を振っていないのは、Bootstrapを使用しているための設計上の問題です。
+
+// header
+%header
+  %h1.header_description <?php bloginfo('description'); ?>
+  %nav.navbar-default.header_navbar
+    %div.container-fluid
+      %div.navbar-header.header_navbar-main
+        %button.navbar-toggle.collapsed{type: "button", data: {toggle: "collapse",target: "#menu-header"}}
+          %p
+            %i.fa.fa-bars
+        %div#sidebar_phone-size
+        %div.sidebar_phone-size_slide
+          %div.sidebar_phone-size_btn-menu
+            %a{:href => "/"}
+              %i.fa.fa-meh-o.sidebar_phone-size_btn-icon
+        %section
+        %nav.sidebar_phone-size_slide-menu
+          %ul.sidebar_phone-size_slide-list
+          
+            / CloseBtn
+            %li.sidebar_phone-size_slide-item
+              %a.btnClose{:href => "/"} CLOSE
+        %a.navbar-brand{href: "<? echo home_url();?>"}
+          %img.header_navbar-img{src: "http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc.png"}
+      %div.collapse.navbar-collapse#menu-header
+        <?php wp_nav_menu( $args ); ?>
