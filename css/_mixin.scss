@@ -11,6 +11,25 @@ $education: #FFA8FF;
 // 福祉
 $welfare: #fc8d00;
 
+.fun{
+  background-color: $fun;
+  &:hover, &:active, &:focus{
+    background-color: rgba($fun,0.6)
+  }
+}
+.education{
+  background-color: $education;
+  &:hover, &:active, &:focus{
+    background-color: rgba($education,0.6)
+  }
+}
+.welfare{
+  background-color: $welfare;
+  &:hover, &:active, &:focus{
+    background-color: rgba($welfare,0.6)
+  }
+}
+
 // New color
 .new{
   color: $logz-color;

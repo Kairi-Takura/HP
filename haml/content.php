@@ -1,5 +1,10 @@
 <!-- / content -->
 <div id='content'>
+  <p id='page-top'>
+    <a href='#wrap'>
+      <i class='fa fa-arrow-up'></i>
+    </a>
+  </p>
   <div id='content_category-bar'>
     <!-- / 施工中 -->
   </div>

@@ -6,6 +6,8 @@ jQuery(function($){
         wrapper = $('#sidebar_phone-size'),
         menu = $('.sidebar_phone-size_slide-menu'),
         menuBtn = $('.sidebar_phone-size_btn-menu'),
+        showClose = $('.sidebar_phone-size_slide-item'),
+        closeClose = $('.sidebar_phone-size_slide-item'),
         closeBtn = $('.btnClose'), //メニューを閉じるボタン
         menuWidth = menu.outerWidth();
 
@@ -35,6 +37,11 @@ jQuery(function($){
         header.animate({
             'left' : menuWidth
         }, 300);
+
+        showClose.css({
+          display: 'block',
+        });
+
     }
 
     //メニューを閉じる関数
@@ -58,6 +65,10 @@ jQuery(function($){
             'left' : 0
         }, 300);
 
+        closeClose.css({
+          display: 'none',
+        });
+
         //シェードを削除
         $('.shade').remove();
     }
@@ -65,5 +76,6 @@ jQuery(function($){
     //メニュー開閉の実行
     menuBtn.on('click', showMenu);
     closeBtn.on('click', hideMenu);
+
 
 });

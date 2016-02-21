@@ -17,11 +17,58 @@
               %i.fa.fa-meh-o.sidebar_phone-size_btn-icon
         %section
         %nav.sidebar_phone-size_slide-menu
+          %div.sidebar_phone-size_slide-title Category
           %ul.sidebar_phone-size_slide-list
-          
+            / Category
+            %li.sidebar_phone-size_slide-category
+              %a.sidebar_phone-size_slide-category-link.fun{:href => "/"} おもしろ
+            %li.sidebar_phone-size_slide-category
+              %a.sidebar_phone-size_slide-category-link.education{:href => "/"} 教育
+            %li.sidebar_phone-size_slide-category
+              %a.sidebar_phone-size_slide-category-link.welfare{:href => "/"} 福祉
+
+          /
+          %div.sidebar_phone-size_slide-title 迷ったら読む！
+          // content
+          %div#content
+            %div#content_all
+              %div#content_main.col-sm-12
+                %section#content_section
+                  <?php query_posts('posts_per_page=2') ?>
+                  <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                  %article.content_article.content_article_mini
+                    %a{:href => "/"}
+                      %div.content_article-all.row.content_article-all_mini
+                        %div.content_article-img-all.content_article-img-all_mini
+                          %p.content_article-img-all-in <?php the_post_thumbnail('ssize'); ?>
+                          <?php
+                          $cats = get_the_category();
+                          $cats = $cats[0];
+                          ?>
+                        <p class=" content_article-category content_article-category-half <?php echo $cats->category_nicename; ?>"> <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                        %div.content_article-content_mini
+                          %div.content_article-name_mini <?php the_modified_author(); ?>
+                          %p
+                            %time.content_article-time_mini{datetime: "<?php echo get_the_date();?>"} <?php echo get_the_date();?>
+                            <?php
+                            $days = 2;
+                            $today = date_i18n('U');
+                            $entry = get_the_time('U');
+                            $elapsed = date('U',($today - $entry)) / 86400;
+                            if( $days > $elapsed ){
+                            echo '<span class="new new_mini">New</span>';
+                            }
+                            ?>
+                          %h1.content_article-title_mini <?php the_title(); ?>
+                  <?php endwhile; endif; ?>
+
+            - 100.times do |i|
+              %li= "item, #{i}"
+
             / CloseBtn
             %li.sidebar_phone-size_slide-item
               %a.btnClose{:href => "/"} CLOSE
+
         %a.navbar-brand{href: "<? echo home_url();?>"}
           %img.header_navbar-img{src: "http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc.png"}
       %div.collapse.navbar-collapse#menu-header

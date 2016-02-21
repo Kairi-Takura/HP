@@ -33,7 +33,7 @@ header{
     @media screen and (max-width: 992px){
       width:100%;
       position: fixed;
-      z-index: 9999;
+      z-index: 99999;
     }
   }
 
@@ -47,13 +47,13 @@ header{
       width:100%;
       position: fixed;
       margin-top: 28px;
-      z-index: 9999;
+      z-index: 99999;
     }
       .header_navbar-img{
         height: 70%;
         margin-top: 12px;
         &:active, &:focus{
-          background: rgba(64,135,199,.4);
+          background: rgba($logz-color,.4);
           border-radius: 5px;
         }
         @media screen and (max-width: 881px){
@@ -177,28 +177,38 @@ header{
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: $logz-color;
+    background-color: rgba($logz-color,.6);
     text-align: center;
     overflow: auto;
-    transition: .5s ease;
+    border: 1px solid $white;
+    transition: .5s cubic-bezier(0.67,-0.73, 0.37, 1.48);
+    .sidebar_phone-size_slide-title{
+      height: 50px;
+      padding: 14px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      background-color: $logz-color;
+      color: $white;
+      clear: both;
+      line-height: 15px;
+      border: 3px solid rgba($white, 0.7);
+    }
     .sidebar_phone-size_slide-list{
       position: relative;
-      height: 100%;
-      overflow: hidden;
-      .sidebar_phone-size_slide-item{
-        position: absolute;
-        bottom: -90%;
-        left: 5%;
-        height: 100%;
-        .btnClose{
+      .sidebar_phone-size_slide-category{
+        height: 40px;
+        float: left;
+        width: 50%;
+        border-bottom: 1.5px solid $white;
+        &:nth-child(2n+1){
+          border-right: 1.5px solid $white;
+        }
+        .sidebar_phone-size_slide-category-link{
+          font-size: 1.2rem;
+          line-height: 39px;
+          display: block;
           color: $white;
-          padding: 33.7px 15px;
-          border-radius: 50%;
-          border: solid $white 2px;
-          &:active, &:focus, &:hover{
-            background-color: $white;
-            color: $logz-color;
-            border: solid $logz-color 2px;
+          &:hover, &:active, &:focus{
             text-decoration: none;
           }
         }
@@ -214,4 +224,25 @@ header{
     cursor: pointer;
     background-color: #333;
     background-color: rgba(0,0,0,.5);
+}
+.sidebar_phone-size_slide-item{
+  position: fixed;
+  bottom: -88.5%;
+  left: 20px;
+  // top: 5.6%;
+  // right: 58px;
+  height: 100%;
+  display: none;
+  .btnClose{
+    color: $white;
+    padding: 33.7px 15px;
+    border-radius: 50%;
+    border: solid $white 2px;
+    &:active, &:focus, &:hover{
+      background-color: $white;
+      color: $logz-color;
+      border: solid $logz-color 2px;
+      text-decoration: none;
+    }
+  }
 }
