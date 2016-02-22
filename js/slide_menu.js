@@ -23,7 +23,7 @@ jQuery(function($){
             top: -1 * currentScroll
         });
 
-        //シェードを追加
+        //背景のやつを追加
         var shade = $('<div></div>');
         shade.attr('class', 'shade').on('click', hideMenu);
 

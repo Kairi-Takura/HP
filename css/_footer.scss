@@ -1,0 +1,32 @@
+footer{
+  background-color: #777;
+  height: 340px;
+  padding: 50px 0;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  @media screen and (max-width: 991px){
+    height: auto;
+    padding: 0;
+  }
+  .footer_main{
+    height: 240px;
+    padding: 10px 60px 30px;
+    background: #fff;
+    .footer_title{
+      float: left;
+      width: 100%;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #000;
+    }
+  }
+  .footer_sub{
+    width: 100%;
+    height: 100%;
+  }
+  .footer_bottom{
+    background-color: $logz-color;
+    height: 100px;
+  }
+}

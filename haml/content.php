@@ -5,6 +5,7 @@
       <i class='fa fa-arrow-up'></i>
     </a>
   </p>
+  <img class='content_top-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_4010.jpg'>
   <div id='content_category-bar'>
     <!-- / 施工中 -->
   </div>

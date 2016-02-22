@@ -188,7 +188,7 @@
         </a>
       </div>
       <div class='collapse navbar-collapse' id='menu-header'>
-        <?php wp_nav_menu( $args ); ?>
+        <?php wp_nav_menu(); ?>
       </div>
     </div>
   </nav>

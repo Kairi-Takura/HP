@@ -9,9 +9,13 @@ Version: 1.0
 
 @import "mixin";
 .sample{background: #ddd}
-
 header{
-  padding-bottom: 400px;
+  @media screen and (max-width: 992px){
+    padding-bottom: 106px;
+  }
+  @media screen and (max-width: 767px){
+    padding-bottom: 84px;
+  }
   .header_description{
     background-color: $logz-color;
     color:$white;

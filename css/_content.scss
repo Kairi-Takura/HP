@@ -42,10 +42,14 @@
         border: $logz-color 4px solid;
       }
   }
+  .content_top-img{
+    width: 100%;
+  }
   #content_category-bar{
     height:55px;
     width:100%;
     background-color: #ddd;
+    margin-top: -3px;
     @media screen and (max-width: 1203px){
       width:1203px;
     }

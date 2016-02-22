@@ -1,2 +1,16 @@
 // footer
-%footer
+%footer.row
+  %div.footer_main.col-md-8.visible-lg.visible-md
+    %p.footer_title title
+    -# <?php wp_nav_menu(array(
+    -# 'theme_location' => 'footer',
+    -# )); ?>
+  %div.footer_sub.col-md4.visible-lg.visible-md a
+  %div.footer_bottom
+    %div.footer_bottom-left
+      / company name
+      %a{:href => "/"}
+      / address
+      %div
+    / buttom
+    %div.footer_bottom-right

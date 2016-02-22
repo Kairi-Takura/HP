@@ -1,4 +1,9 @@
 <?php
+
+register_nav_menus();
+
+add_theme_support('custom-background');
+
 // アイキャッチ画像
 add_theme_support('post-thumbnails');
 

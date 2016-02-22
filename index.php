@@ -216,7 +216,7 @@
         </a>
       </div>
       <div class='collapse navbar-collapse' id='menu-header'>
-        <?php wp_nav_menu( $args ); ?>
+        <?php wp_nav_menu(); ?>
       </div>
     </div>
   </nav>
@@ -229,6 +229,7 @@
       <i class='fa fa-arrow-up'></i>
     </a>
   </p>
+  <img class='content_top-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_4010.jpg'>
   <div id='content_category-bar'>
     <!-- / 施工中 -->
   </div>
@@ -458,4 +459,19 @@
 </div>
 <!-- footer -->
 <!-- / footer -->
-<footer></footer>
+<footer class='row'>
+  <div class='footer_main col-md-8 visible-lg visible-md'>
+    <p class='footer_title'>title</p>
+  </div>
+  <div class='footer_sub col-md4 visible-lg visible-md'>a</div>
+  <div class='footer_bottom'>
+    <div class='footer_bottom-left'>
+      <!-- company name -->
+      <a href='/'></a>
+      <!-- address -->
+      <div></div>
+    </div>
+    <!-- buttom -->
+    <div class='footer_bottom-right'></div>
+  </div>
+</footer>
