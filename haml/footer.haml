@@ -5,12 +5,26 @@
     -# <?php wp_nav_menu(array(
     -# 'theme_location' => 'footer',
     -# )); ?>
-  %div.footer_sub.col-md4.visible-lg.visible-md a
-  %div.footer_bottom
-    %div.footer_bottom-left
-      / company name
-      %a{:href => "/"}
-      / address
-      %div
-    / buttom
-    %div.footer_bottom-right
+  %div.footer_sub.col-md4.visible-lg.visible-lg.visible-md a
+  %div.footer_bottom.row.visible-lg.visible-md
+    %div.footer_bottom-center
+      %div.footer_bottom-left.col-lg-6
+        %a.footer_bottom-link{:href => "/"}
+          / company name img
+          %img.footer_bottom-img{src: "http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc-white.png"}
+        / address
+        %div.footer_bottom-address
+          %p.footer_bottom-address-contents 株式会社LOGZ　　TEL03-6233-8955
+          %p.footer_bottom-address-contents 〒160-0022　東京都新宿区新宿6-27-29
+      / buttom
+      %div.footer_bottom-right.col-lg-6
+        %ul.footer_bottom-right-list.visible-lg.visible-md
+          %li.footer_bottom-right-item
+            %a{:href => "/"} プライバシーポリシー
+          %li.footer_bottom-right-item
+            %a{:href => "/"} メディア・広告掲載について
+          %li.footer_bottom-right-item
+            %a{:href => "/"} サイトマップ
+        %copyright.footer_bottom-right-copyright &copy 2015-2016 LOGZ,Inc.
+  %div.footer_bottom_mini.hidden-lg.hidden-md
+    %copyright.footer_bottom-right-copyright_mini &copy 2015-2016 LOGZ,Inc.

@@ -1,7 +1,7 @@
 $(function() {
     var topBtn = $('#page-top');
     topBtn.hide();
-    //スクロールが100に達したらボタン表示
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 450) {
             topBtn.fadeIn();
@@ -9,7 +9,7 @@ $(function() {
             topBtn.fadeOut();
         }
     });
-    //スクロールしてトップ
+
     topBtn.click(function () {
         $('body,html').animate({
             scrollTop: 0

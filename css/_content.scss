@@ -21,9 +21,9 @@
       z-index: 9999;
   }
   #page-top a {
-      background: $logz-color;
+      background: $white;
       text-decoration: none;
-      color: $white;
+      color: $logz-color;
       width: 50px;
       padding: 28px 0;
       text-align: center;
@@ -36,10 +36,10 @@
       border: $logz-color 4px solid;
       &:hover, &:active, &focus{
         text-decoration: none;
-        color: $logz-color;
-        background: $white;
+        color: $white;
+        background: $logz-color;
         transition: .3s ease-in;
-        border: $logz-color 4px solid;
+        border: $white 4px solid;
       }
   }
   .content_top-img{

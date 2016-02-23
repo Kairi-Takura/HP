@@ -46,8 +46,8 @@
           }
         }
         .member_other-all:nth-child(2n+1){
-          background-color: rgba(64,135,199,.6);
-          border: rgba(64,135,199,.3) 1px solid;
+          background-color: rgba($logz-color,.6);
+          border: rgba($logz-color,.3) 1px solid;
           border-radius: 5px;
           transition: .8s ease-out;
           &:hover{
