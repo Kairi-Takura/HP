@@ -1,6 +1,28 @@
 <?php
 
-register_nav_menus();
+register_nav_menus(array(
+	'header' => 'header'
+));
+
+register_nav_menus(array(
+  'footer-left' => 'footer-left'
+));
+
+register_nav_menus(array(
+  'footer-center' => 'footer-center'
+));
+
+register_nav_menus(array(
+  'footer-right' => 'footer-right'
+));
+
+register_nav_menus(array(
+  'sidebar-other' => 'sidebar-other'
+));
+
+register_nav_menus(array(
+  'sidebar-category' => 'sidebar-category'
+));
 
 add_theme_support('custom-background');
 

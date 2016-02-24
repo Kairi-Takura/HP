@@ -70,14 +70,15 @@
                   %i.fa.fa-angle-right
 
           %div.sidebar_phone-size_slide-title Category
-          %ul.sidebar_phone-size_slide-list
-            / Category
-            %li.sidebar_phone-size_slide-category
-              %a.sidebar_phone-size_slide-category-link.fun{:href => "/"} おもしろ
-            %li.sidebar_phone-size_slide-category
-              %a.sidebar_phone-size_slide-category-link.education{:href => "/"} 教育
-            %li.sidebar_phone-size_slide-category
-              %a.sidebar_phone-size_slide-category-link.welfare{:href => "/"} 福祉
+          -# %ul.sidebar_phone-size_slide-list
+          -#   / Category
+          -#   %li.sidebar_phone-size_slide-category
+          -#     %a.sidebar_phone-size_slide-category-link.fun{:href => "/"} おもしろ
+          -#   %li.sidebar_phone-size_slide-category
+          -#     %a.sidebar_phone-size_slide-category-link.education{:href => "/"} 教育
+          -#   %li.sidebar_phone-size_slide-category
+          -#     %a.sidebar_phone-size_slide-category-link.welfare{:href => "/"} 福祉
+          <?php wp_nav_menu(array('theme_location' => 'sidebar-category'));?>
 
           / sample
           %div.sidebar_phone-size_slide-title 迷ったら読む！
@@ -114,8 +115,15 @@
                           %h1.content_article-title_mini <?php the_title(); ?>
                   <?php endwhile; endif; ?>
 
-            - 100.times do |i|
-              %li= "item, #{i}"
+          %ul.sidebar_phone-size_slide-advertisment_wide
+            %li.sidebar_phone-size_slide-advertisment-all
+              %a{:href => "/"}
+                %img{src: "http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5129.jpg"}
+
+          %div.sidebar_phone-size_slide-other
+            <?php wp_nav_menu(array('theme_location' => 'sidebar-other'));?>
+
+          %div.sidebar_phone-size_slide-dummy
 
             / CloseBtn
             %li.sidebar_phone-size_slide-item
@@ -124,4 +132,4 @@
         %a.navbar-brand{href: "<? echo home_url();?>"}
           %img.header_navbar-img{src: "http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc.png"}
       %div.collapse.navbar-collapse#menu-header
-        <?php wp_nav_menu(); ?>
+        <?php wp_nav_menu(array('theme_location' => 'header'));?>

@@ -1,11 +1,23 @@
 // footer
 %footer.row
   %div.footer_main.col-md-8.visible-lg.visible-md
-    %p.footer_title title
-    -# <?php wp_nav_menu(array(
-    -# 'theme_location' => 'footer',
-    -# )); ?>
-  %div.footer_sub.col-md4.visible-lg.visible-lg.visible-md a
+    %ul.row
+      %li.col-md-4
+        %p.footer_title title
+        <?php wp_nav_menu(array(
+        'theme_location' => 'footer-left',
+        )); ?>
+      %li.col-md-4
+        %p.footer_title 　
+        <?php wp_nav_menu(array(
+        'theme_location' => 'footer-center',
+        )); ?>
+      %li.col-md-4
+        %p.footer_title　
+        <?php wp_nav_menu(array(
+        'theme_location' => 'footer-right',
+        )); ?>
+  %div.footer_sub.col-md4.visible-lg.visible-lg.visible-md
   %div.footer_bottom.row.visible-lg.visible-md
     %div.footer_bottom-center
       %div.footer_bottom-left.col-lg-6
@@ -26,5 +38,11 @@
           %li.footer_bottom-right-item
             %a{:href => "/"} サイトマップ
         %copyright.footer_bottom-right-copyright &copy 2015-2016 LOGZ,Inc.
+  %div.footer_bottom-address_mini.hidden-lg.hidden-md
+    %p.footer_bottom-address-contents_mini 株式会社LOGZ
+    %p.footer_bottom-address-contents_mini 〒160-0022
+    %p.footer_bottom-address-contents_mini TEL03-6233-8955
+    %p.footer_bottom-address-contents_mini 東京都新宿区新宿6-27-29
+    %img.footer_bottom-address-img_mini{src: "http://localhost:8888/wordpress/wp-content/uploads/2016/02/CZkRq-kVAAIzrZj.jpg"}
   %div.footer_bottom_mini.hidden-lg.hidden-md
     %copyright.footer_bottom-right-copyright_mini &copy 2015-2016 LOGZ,Inc.

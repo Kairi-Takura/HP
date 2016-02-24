@@ -4996,8 +4996,8 @@ select[multiple].input-group-sm > {
 }
 
 .navbar-collapse {
-  padding-right: 15px;
-  padding-left: 15px;
+  // padding-right: 15px;
+  // padding-left: 15px;
   overflow-x: visible;
   -webkit-overflow-scrolling: touch;
   border-top: 1px solid transparent;
@@ -5324,7 +5324,7 @@ select[multiple].input-group-sm > {
     float: left !important;
   }
   .menu {
-    float: right !important;
+    float: right;
     margin-right: -15px;
     ~ .menu {
       margin-right: 0;

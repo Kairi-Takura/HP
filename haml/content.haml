@@ -40,7 +40,7 @@
                 // Maybe...
         <?php endwhile; endif; ?>
 
-        <?php query_posts('posts_per_page=18&offset=1') ?>
+        <?php query_posts('posts_per_page=2&offset=1');?>
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
         %article.content_article.content_article-other
           %a{:href => "/"}
@@ -68,7 +68,6 @@
                 %div.content_article-warp
               %figcaption.content_article-overlay.content_article-overlay-half
         <?php endwhile; endif; ?>
-
 
       %section#content_section.visible-xs.visible-sm
         <?php query_posts('posts_per_page=18') ?>
