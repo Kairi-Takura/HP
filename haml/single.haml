@@ -1,0 +1,25 @@
+/ main
+= Haml::Engine.new(File.read("main.haml")).render
+/ Header
+= Haml::Engine.new(File.read("header.haml")).render
+/ Single
+%div#content
+  %div#content_all.row
+    %div#content_main
+      %section#content_section
+        %article#single_article
+          %div.single_article-all
+            <?php if(have_posts()): while(have_posts()): the_post(); ?>
+            %div.single_article-info
+              %time.single_article-date-text{datetime: "<?php echo get_the_date('Y-m-d');?>"} <?php echo get_the_date('Y-m-d');?>
+
+            <?php the_title('<h1 class="single_article-title-text">', '</h1>' ); ?>
+            %div.single_article-content
+              <?php the_content(); ?>
+            <?php endwhile; else: ?>
+            %p 記事が見つかりませんでした。
+            <?php endif; ?>
+            <?php wp_reset_query();?>
+
+/ footer
+= Haml::Engine.new(File.read("footer.haml")).render

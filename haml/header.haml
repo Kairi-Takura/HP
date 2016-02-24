@@ -80,46 +80,47 @@
           -#     %a.sidebar_phone-size_slide-category-link.welfare{:href => "/"} 福祉
           <?php wp_nav_menu(array('theme_location' => 'sidebar-category'));?>
 
-          / sample
-          %div.sidebar_phone-size_slide-title 迷ったら読む！
-          // content
-          %div#content
-            %div#content_all
-              %div#content_main.col-sm-12
-                %section#content_section
-                  <?php query_posts('posts_per_page=2') ?>
-                  <?php if(have_posts()): while(have_posts()): the_post(); ?>
-                  %article.content_article.content_article_mini
-                    %a{:href => "/"}
-                      %div.content_article-all.row.content_article-all_mini
-                        %div.content_article-img-all.content_article-img-all_mini
-                          %p.content_article-img-all-in <?php the_post_thumbnail('ssize'); ?>
-                          <?php
-                          $cats = get_the_category();
-                          $cats = $cats[0];
-                          ?>
-                        <p class=" content_article-category content_article-category-half <?php echo $cats->category_nicename; ?>"> <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                        %div.content_article-content_mini
-                          %div.content_article-name_mini <?php the_modified_author(); ?>
-                          %p
-                            %time.content_article-time_mini{datetime: "<?php echo get_the_date();?>"} <?php echo get_the_date();?>
-                            <?php
-                            $days = 2;
-                            $today = date_i18n('U');
-                            $entry = get_the_time('U');
-                            $elapsed = date('U',($today - $entry)) / 86400;
-                            if( $days > $elapsed ){
-                            echo '<span class="new new_mini">New</span>';
-                            }
-                            ?>
-                          %h1.content_article-title_mini <?php the_title(); ?>
-                  <?php endwhile; endif; ?>
+          -# / sample
+          -# %div.sidebar_phone-size_slide-title 迷ったら読む！
+          -# // content
+          -# %div#content
+          -#   %div#content_all
+          -#     %div#content_main.col-sm-12
+          -#       %section#content_section
+          -#         <?php if(have_posts()): while(have_posts()): the_post(); ?>
+          -#         %article.content_article.content_article_mini
+          -#           <a href="<?php echo get_permalink(); ?>">
+          -#           %div.content_article-all.row.content_article-all_mini
+          -#             %div.content_article-img-all.content_article-img-all_mini
+          -#               %p.content_article-img-all-in <?php the_post_thumbnail('ssize'); ?>
+          -#               <?php
+          -#               $cats = get_the_category();
+          -#               $cats = $cats[0];
+          -#               ?>
+          -#             <p class=" content_article-category content_article-category-half <?php echo $cats->category_nicename; ?>"> <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+          -#             %div.content_article-content_mini
+          -#               %div.content_article-name_mini <?php the_modified_author(); ?>
+          -#               %p
+          -#                 %time.content_article-time_mini{datetime: "<?php echo get_the_date();?>"} <?php echo get_the_date();?>
+          -#                 <?php
+          -#                 $days = 2;
+          -#                 $today = date_i18n('U');
+          -#                 $entry = get_the_time('U');
+          -#                 $elapsed = date('U',($today - $entry)) / 86400;
+          -#                 if( $days > $elapsed ){
+          -#                 echo '<span class="new new_mini">New</span>';
+          -#                 }
+          -#                 ?>
+          -#               %h1.content_article-title_mini <?php the_title(); ?>
+          -#         <?php endwhile; endif; ?>
 
+          %div.sidebar_phone-size_slide-title Advertisment
           %ul.sidebar_phone-size_slide-advertisment_wide
             %li.sidebar_phone-size_slide-advertisment-all
               %a{:href => "/"}
                 %img{src: "http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5129.jpg"}
 
+          %div.sidebar_phone-size_slide-title Other
           %div.sidebar_phone-size_slide-other
             <?php wp_nav_menu(array('theme_location' => 'sidebar-other'));?>
 

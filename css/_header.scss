@@ -186,6 +186,9 @@ header{
     overflow: auto;
     border: 1px solid $white;
     transition: .5s cubic-bezier(0.67,-0.73, 0.37, 1.48);
+    @media screen and (min-width: 500px){
+      width: 500px;
+    }
     .sidebar_phone-size_slide-title{
       height: 50px;
       padding: 14px;
@@ -203,7 +206,9 @@ header{
     .sidebar_phone-size_slide-other{
       .menu-sidebar-other-container{
         #menu-sidebar-other{
+          float: none;
           .menu-item{
+            float: none;
             border-top: 1.5px solid $white;
             &:last-child{
               border-bottom: 1.5px solid $white;
@@ -341,6 +346,7 @@ header{
     .menu-sidebar-category-container{
       #menu-sidebar-category{
         position: relative;
+        float: none;
         .menu-item{
           height: 40px;
           float: left;

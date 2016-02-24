@@ -1,6 +1,6 @@
 footer{
   height: 340px;
-  padding: 50px 0;
+  padding-bottom: 100px;
   margin-right: 0 !important;
   margin-left: 0 !important;
   @media screen and (max-width: 991px){
@@ -59,10 +59,13 @@ footer{
     }
     .footer_bottom-address-img_mini{
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 35%;
+      top: 5%;
+      left: 5%;
+      width: 100px;
       height: auto;
+      @media screen and (max-width: 399px){
+        width: 80px;
+      }
     }
   }
   .footer_bottom{

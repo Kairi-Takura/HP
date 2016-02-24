@@ -15,7 +15,7 @@
         <?php query_posts('posts_per_page=1') ?>
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
         <article class='content_article content_article-first'>
-          <a href='&lt;?php echo get_permalink(); ?&gt;'>
+          <a href="<?php echo get_permalink(); ?>">
             <div class='content_article-all content_article-all-first'>
               <?php the_post_thumbnail('lsize'); ?>
               <?php

@@ -1,0 +1,30 @@
+#single_article{
+  border: 1px solid $white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px 0px rgba($white, 0.8);
+  background-color: $white;
+  overflow: hidden;
+  .single_article-all{
+    padding: 25px 37px 37px;
+    .single_article-info{
+      margin-bottom: 20px;
+      .single_article-date-text{
+        font-size: 1.1rem;
+      }
+    }
+      .single_article-title-text{
+        font-size: 2.0rem;
+        padding-bottom: 25px;
+        border-bottom: #777 1px solid;
+    }
+    .single_article-content{
+      margin-top: 25px;
+      p{
+        img{
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
