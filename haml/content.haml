@@ -3,9 +3,6 @@
   %p#page-top
     %a{:href => "#wrap"}
       %i.fa.fa-arrow-up
-  %img.content_top-img{src: "http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_4010.jpg"}
-  %div#content_category-bar
-    // 施工中
 
   %div#content_all.row
     %div#content_main.col-md-8.col-sm-12
@@ -38,6 +35,7 @@
               %div.content_article-warp
             %figcaption.content_article-overlay
               // Maybe...
+          </a>
         <?php endwhile; endif; ?>
 
         <?php query_posts('posts_per_page=18&offset=1');?>
@@ -67,6 +65,7 @@
               %h1.content_article-title.content_article-title-half <?php the_title(); ?>
               %div.content_article-warp
             %figcaption.content_article-overlay.content_article-overlay-half
+          </a>
         <?php endwhile; endif; ?>
 
       %section#content_section.visible-xs.visible-sm
@@ -96,6 +95,7 @@
                 }
                 ?>
               %h1.content_article-title_mini <?php the_title(); ?>
+          </a>
         <?php endwhile; endif; ?>
 
     / sidebar

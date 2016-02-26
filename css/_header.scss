@@ -10,11 +10,33 @@ Version: 1.0
 @import "mixin";
 .sample{background: #ddd}
 header{
-  @media screen and (max-width: 992px){
-    padding-bottom: 106px;
+  .content_top-img{
+    width: 100%;
+    padding-top: 80px;
+    @media screen and (min-width: 768px){
+      padding-top: 106px;
+    }
+    @media screen and (min-width: 993px){
+      padding-top: 0px;
+    }
   }
-  @media screen and (max-width: 767px){
-    padding-bottom: 84px;
+  a{
+    .content_top-img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  #content_category-bar{
+    height:55px;
+    width:100%;
+    background-color: #ddd;
+    margin-top: -3px;
+    @media screen and (max-width: 1203px){
+      width:1203px;
+    }
+    @media screen and (max-width: 990px){
+      width:100% !important;
+    }
   }
   .header_description{
     background-color: $logz-color;
@@ -42,8 +64,6 @@ header{
   }
 
   .header_navbar{
-    border-bottom: 4px solid $logz-color;
-    box-sizing: border-box;
     @media screen and (max-width: 1203px){
       width:1203px;
     }
@@ -52,6 +72,10 @@ header{
       position: fixed;
       margin-top: 28px;
       z-index: 99999;
+    }
+    .container-fluid{
+      border-bottom: 4px solid $logz-color;
+      box-sizing: border-box;
     }
       .header_navbar-img{
         height: 70%;
@@ -186,8 +210,12 @@ header{
     overflow: auto;
     border: 1px solid $white;
     transition: .5s cubic-bezier(0.67,-0.73, 0.37, 1.48);
-    @media screen and (min-width: 500px){
-      width: 500px;
+    // @media screen and (min-width: 500px){
+    //   width: 500px;
+    // }
+    .sidebar_phone-size_slide-title-advertisment{
+      border-bottom: 1px solid $white;
+      margin: 5px 0;
     }
     .sidebar_phone-size_slide-title{
       height: 50px;
@@ -230,12 +258,10 @@ header{
       .sidebar_phone-size_slide-advertisment-all{
         margin: 0 10px 5px;
         overflow: hidden;
-        height: 150px;
         border-radius: 5px;
-        border: 1px solid #555;
-        background-color: $white;
-        &:last-child{
-          margin-bottom: 0;
+        margin:{
+          top: 5px;
+          bottom: 5px;
         }
         a{
           &:active, &focus{
@@ -372,6 +398,7 @@ header{
 .shade{
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1;
     width: 100%;
     height: 100%;

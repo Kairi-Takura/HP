@@ -42,21 +42,6 @@
         border: $white 4px solid;
       }
   }
-  .content_top-img{
-    width: 100%;
-  }
-  #content_category-bar{
-    height:55px;
-    width:100%;
-    background-color: #ddd;
-    margin-top: -3px;
-    @media screen and (max-width: 1203px){
-      width:1203px;
-    }
-    @media screen and (max-width: 990px){
-      width:100% !important;
-    }
-  }
   #content_all{
     margin: 0 auto;
     box-sizing: border-box;
@@ -86,6 +71,7 @@
       width: auto !important;
     }
     #content_main{
+      float: left;
       @media screen and (max-width: 991px){
         width:100% !important;
         background-color: $xs_sm_background-color;

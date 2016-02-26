@@ -21,5 +21,8 @@
             <?php endif; ?>
             <?php wp_reset_query();?>
 
+    / single sidebar
+    = Haml::Engine.new(File.read("sidebar-single.haml")).render
+
 / footer
 = Haml::Engine.new(File.read("footer.haml")).render

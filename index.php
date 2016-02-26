@@ -117,18 +117,21 @@
           </div>
           <div class='sidebar_phone-size_slide-title'>Category</div>
           <?php wp_nav_menu(array('theme_location' => 'sidebar-category'));?>
-          <div class='sidebar_phone-size_slide-title'>Advertisment</div>
-          <ul class='sidebar_phone-size_slide-advertisment_wide'>
-            <li class='sidebar_phone-size_slide-advertisment-all'>
-              <a href='/'>
-                <img src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5129.jpg'>
-              </a>
-            </li>
-          </ul>
           <div class='sidebar_phone-size_slide-title'>Other</div>
           <div class='sidebar_phone-size_slide-other'>
             <?php wp_nav_menu(array('theme_location' => 'sidebar-other'));?>
           </div>
+          <div class='sidebar_phone-size_slide-title-advertisment'>
+            <ul class='sidebar_phone-size_slide-advertisment_wide'>
+              <li class='sidebar_phone-size_slide-advertisment-all'>
+                <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280"/></a>
+              </li>
+            </ul>
+          </div>
+          <a href="<? echo home_url();?>">
+          <img class='sidebar_phone-size_slide-mini-rooton' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/rooton-1.png'>
+          <img class='sidebar_phone-size_slide-mini-text' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/CANo38AUwAEQ8o9.png'>
+          </a>
           <div class='sidebar_phone-size_slide-dummy'>
             <!-- CloseBtn -->
             <li class='sidebar_phone-size_slide-item'>
@@ -136,8 +139,8 @@
             </li>
           </div>
         </nav>
-        <a class='navbar-brand' href='&lt;? echo home_url();?&gt;'>
-          <img class='header_navbar-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc.png'>
+        <a href="<? echo home_url();?>" class="navbar-brand">
+        <img class='header_navbar-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc.png'>
         </a>
       </div>
       <div class='collapse navbar-collapse' id='menu-header'>
@@ -145,6 +148,10 @@
       </div>
     </div>
   </nav>
+  <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280" class="content_top-img"/></a>
+  <div id='content_category-bar'>
+    <!-- / 施工中 -->
+  </div>
 </header>
 <!-- content -->
 <!-- / content -->
@@ -154,10 +161,6 @@
       <i class='fa fa-arrow-up'></i>
     </a>
   </p>
-  <img class='content_top-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_4010.jpg'>
-  <div id='content_category-bar'>
-    <!-- / 施工中 -->
-  </div>
   <div class='row' id='content_all'>
     <div class='col-md-8 col-sm-12' id='content_main'>
       <section class='visible-lg visible-md' id='content_section'>
@@ -193,6 +196,7 @@
               <!-- / Maybe... -->
             </figcaption>
           </div>
+          </a>
         </article>
         <?php endwhile; endif; ?>
         <?php query_posts('posts_per_page=18&offset=1');?>
@@ -225,6 +229,7 @@
             </div>
             <figcaption class='content_article-overlay content_article-overlay-half'></figcaption>
           </div>
+          </a>
         </article>
         <?php endwhile; endif; ?>
       </section>
@@ -259,6 +264,7 @@
               <h1 class='content_article-title_mini'><?php the_title(); ?></h1>
             </div>
           </div>
+          </a>
         </article>
         <?php endwhile; endif; ?>
       </section>
@@ -267,7 +273,7 @@
     <div class='col-md-4 hidden-xs hidden-sm' id='sidebar'>
       <section id='sidebar_section'>
         <!-- / Members -->
-        <h1 class='sidebar_article-member_title'>Members</h1>
+        <h1 class='sidebar_article-member_title'>メンバー</h1>
         <article class='sidebar_article-member'>
           <div class='sidebar_article-member_main'></div>
           <div class='sidebar_article-member_other row'>
@@ -328,8 +334,8 @@
           </div>
         </article>
         <!-- / Recommended -->
+        <h1 class='sidebar_article-member_title'>おすすめの記事</h1>
         <article class='sidebar_article-recommended'>
-          <h1 class='sidebar_article-member_title'>Members</h1>
           <div id='content'>
             <div class='sidebar_article-content' id='content_main'>
               <section id='content_section'>
@@ -368,10 +374,8 @@
         <!-- Advertisement (Narrow　300*250) -->
         <article class='sidebar_article-advertisement_narrow'>
           <div class='sidebar_article-advertisement_narrow-all'>
-            <a href='/'>
-              <img src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5129.jpg'>
-            </a>
           </div>
+          <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280" class="content_top-img"/></a>
         </article>
       </section>
     </div>
@@ -438,7 +442,7 @@
     <p class='footer_bottom-address-contents_mini'>〒160-0008</p>
     <p class='footer_bottom-address-contents_mini'>TEL03-6233-8955</p>
     <p class='footer_bottom-address-contents_mini'>新宿区三栄町29-6 Fビル 5階</p>
-    <img class='footer_bottom-address-img_mini' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/rooton.png'>
+    <img class='footer_bottom-address-img_mini' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/rooton-1.png'>
   </div>
   <div class='footer_bottom_mini hidden-lg hidden-md'>
     <copyright class='footer_bottom-right-copyright_mini'>&copy 2015-2016 LOGZ,Inc.</copyright>
