@@ -1,0 +1,85 @@
+.message_article{
+  .message_article-all{
+    height: 480px;
+    width: 100%;
+    overflow: hidden;
+    @media screen and (max-width: 991px){
+      height: auto;
+    }
+    .message_article-img{
+      width: 320px;
+      height: 450px;
+      overflow: hidden;
+      float: left;
+      border-radius: 5px;
+      @media screen and (max-width: 991px){
+        width: 160px;
+        height: 225px;
+      }
+      img{
+        width: 100%;
+        height: auto;
+        min-height: 450px;
+        @media screen and (max-width: 991px){
+          width: 100%;
+          height: auto;
+          min-height: 225px;
+        }
+      }
+    }
+    .message_article-info{
+      float: right;
+      @media screen and (max-width: 991px){
+        float: left;
+        margin-top: 163px;
+        margin-left: 20px;
+      }
+      @media screen and (max-width: 350px){
+        margin-left: 0;
+      }
+      li{
+        float: left;
+        @media screen and (max-width: 991px){
+          float: none;
+        }
+      }
+      .message_article-info-officer{
+        line-height: 2.3rem;
+        margin: 0 5px;
+        font-family: "游明朝体","YuMincho"; font-weight: bold;
+        @media screen and (max-width: 991px){
+          font-size: 0.8rem;
+        }
+      }
+      .message_article-name{
+        font-size: 1.6rem;
+        margin: 0 5px;
+        font-family: "游明朝体","YuMincho"; font-weight: bold;
+      }
+    }
+    .message_article_content{
+      float: left;
+      width: 419px;
+      text-align: center;
+      margin: 0 20px;
+      max-height: 480px;
+      overflow: hidden;
+      @media screen and (max-width: 991px){
+        width: auto;
+        max-height: none;
+      }
+      .message_article_content-title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-bottom: 1.5px solid #000;
+        padding: 25px 0;
+        margin-bottom: 25px;
+      }
+      .message_article_content-text{
+        text-align: left;
+        line-height: 23.5px;
+        letter-spacing: -.25px;
+      }
+    }
+  }
+}

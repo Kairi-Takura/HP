@@ -1,0 +1,52 @@
+.recruit-ques_main{
+  margin-bottom: 40px;
+  .recruit-ques-main-list{
+    .recruit-ques-main-item{
+      border-bottom: 1px solid $logz-color;
+      &:last-child{
+        border: none;
+      }
+      padding: 33px 0 40px;
+      .recruit-ques-main-item-frame{
+        .recruit-ques-main-item-q{
+          display: table;
+          margin-bottom: 10px;
+        }
+        .recruit-ques-main-item-a{
+          display: table;
+          .recruit-ques-main-item-td{
+            display: table-cell;
+            vertical-align: middle;
+            .recruit-ques-main-item-td-content{
+              font-weight: normal;
+              font-size: 1.0rem;
+              @media screen and (max-width: 768px){
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.recruit-ques-main-item-th{
+  width: 50px;
+  .recruit-ques-main-item-th-icon{
+    font-size: 1.8rem;
+    @media screen and (max-width: 768px){
+      font-size: 1.4rem;
+    }
+  }
+}
+.recruit-ques-main-item-td{
+  display: table-cell;
+  vertical-align: middle;
+  .recruit-ques-main-item-td-content{
+    font-weight: bold;
+    font-size: 1.2rem;
+    @media screen and (max-width: 768px){
+      font-size: 1.0rem;
+    }
+  }
+}

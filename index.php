@@ -1,4 +1,4 @@
-<!-- main -->
+<!-- Header -->
 <!DOCTYPE html>
 <html lang='ja'>
   <head>
@@ -21,138 +21,111 @@
     <!-- Jquey -->
     <script src='<?php echo get_template_directory_uri(); ?>/js/slide_menu.js'></script>
     <script src='<?php echo get_template_directory_uri(); ?>/js/page-top.js'></script>
+    <script src='<?php echo get_template_directory_uri(); ?>/js/slick.min.js'></script>
     <!-- Title -->
     <title>プログラミングスクールを運営する会社のブログ| LOGZ,inc.</title>
     <body <?php body_class(); ?>>
-  </head>
-</html>
-<!-- Header -->
-<!-- Memo !important -->
-<!-- header,footerなどの一番の親要素のクラス名を振っていないのは、Bootstrapを使用しているための設計上の問題です。 -->
-<!-- / header -->
-<header>
-  <h1 class='header_description'><?php bloginfo('description'); ?></h1>
-  <nav class='navbar-default header_navbar'>
-    <div class='container-fluid'>
-      <div class='navbar-header header_navbar-main'>
-        <button class='navbar-toggle collapsed' data-target='#menu-header' data-toggle='collapse' type='button'>
-          <p>
-            <i class='fa fa-bars'></i>
-          </p>
-        </button>
-        <div id='sidebar_phone-size'></div>
-        <div class='sidebar_phone-size_slide'>
-          <div class='sidebar_phone-size_btn-menu'>
-            <a href='/'>
-              <i class='fa fa-meh-o sidebar_phone-size_btn-icon'></i>
-            </a>
-          </div>
-        </div>
-        <section></section>
-        <nav class='sidebar_phone-size_slide-menu'>
-          <div class='sidebar_phone-size_slide-title'>Member</div>
-          <div class='sidebar_phone-size_slide-member'>
-            <ul class='sidebar_phone-size_slide-member-list row'>
-              <li class='sidebar_phone-size_slide-member-item col-xs-4'>
+    <!-- / header -->
+    <header>
+      <h1 class='header_description'><?php bloginfo('description'); ?></h1>
+      <nav class='navbar-default header_navbar'>
+        <div class='container-fluid'>
+          <div class='navbar-header header_navbar-main'>
+            <button class='navbar-toggle collapsed' data-target='#menu-header' data-toggle='collapse' type='button'>
+              <p>
+                <i class='fa fa-bars'></i>
+              </p>
+            </button>
+            <div id='sidebar_phone-size'></div>
+            <div class='sidebar_phone-size_slide'>
+              <div class='sidebar_phone-size_btn-menu'>
                 <a href='/'>
-                  <p class='sidebar_phone-size_slide-member-img-frame'>
-                    <img class='sidebar_phone-size_slide-member-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                  </p>
-                  <h1 class='sidebar_phone-size_slide-member-manager'>代表取締役</h1>
-                  <h2 class='sidebar_phone-size_slide-member-name'>ああああああああああ</h2>
-                </a>
-              </li>
-              <li class='sidebar_phone-size_slide-member-item col-xs-4'>
-                <a href='/'>
-                  <p class='sidebar_phone-size_slide-member-img-frame'>
-                    <img class='sidebar_phone-size_slide-member-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                  </p>
-                  <h1 class='sidebar_phone-size_slide-member-manager'>代表取締役</h1>
-                  <h2 class='sidebar_phone-size_slide-member-name'>ああああああああああ</h2>
-                </a>
-              </li>
-              <li class='sidebar_phone-size_slide-member-item col-xs-4'>
-                <a href='/'>
-                  <p class='sidebar_phone-size_slide-member-img-frame'>
-                    <img class='sidebar_phone-size_slide-member-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                  </p>
-                  <h1 class='sidebar_phone-size_slide-member-manager'>代表取締役</h1>
-                  <h2 class='sidebar_phone-size_slide-member-name'>ああああああああああ</h2>
-                </a>
-              </li>
-              <li class='sidebar_phone-size_slide-member-item col-xs-4'>
-                <a href='/'>
-                  <p class='sidebar_phone-size_slide-member-img-frame'>
-                    <img class='sidebar_phone-size_slide-member-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                  </p>
-                  <h1 class='sidebar_phone-size_slide-member-manager'>代表取締役</h1>
-                  <h2 class='sidebar_phone-size_slide-member-name'>ああああああああああ</h2>
-                </a>
-              </li>
-              <li class='sidebar_phone-size_slide-member-item col-xs-4'>
-                <a href='/'>
-                  <p class='sidebar_phone-size_slide-member-img-frame'>
-                    <img class='sidebar_phone-size_slide-member-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                  </p>
-                  <h1 class='sidebar_phone-size_slide-member-manager'>代表取締役</h1>
-                  <h2 class='sidebar_phone-size_slide-member-name'>ああああああああああ</h2>
-                </a>
-              </li>
-              <li class='sidebar_phone-size_slide-member-item col-xs-4'>
-                <a href='/'>
-                  <p class='sidebar_phone-size_slide-member-img-frame'>
-                    <img class='sidebar_phone-size_slide-member-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                  </p>
-                  <h1 class='sidebar_phone-size_slide-member-manager'>代表取締役</h1>
-                  <h2 class='sidebar_phone-size_slide-member-name'>ああああああああああ</h2>
-                </a>
-              </li>
-              <div class='sidebar_phone-size_slide-member-show'>
-                <a href='/'>
-                  <span class='sidebar_phone-size_slide-member-show-content'>すべてのLOGZメンバーを見る</span>
-                  <i class='fa fa-angle-right'></i>
+                  <i class='fa fa-meh-o sidebar_phone-size_btn-icon'></i>
                 </a>
               </div>
-            </ul>
+            </div>
+            <section></section>
+            <nav class='sidebar_phone-size_slide-menu'>
+              <div class='sidebar_phone-size_slide-title'>Member</div>
+              <div class='sidebar_phone-size_slide-member'>
+                <ul class='sidebar_phone-size_slide-member-list row'>
+                  <?php
+                  $loop = new WP_Query(array("post_type" => "members"));
+                  if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
+                  ?>
+                  <li class='sidebar_phone-size_slide-member-item col-xs-4'>
+                    <a href='<?php echo get_permalink(); ?>'>
+                    <p class='sidebar_phone-size_slide-member-img-frame'>
+                      <?php the_post_thumbnail('thumbnail', array( 'class' => 'sidebar_phone-size_slide-member-img' )); ?>
+                    </p>
+                    <?php
+                    $terms = get_the_terms( get_the_ID(), 'members_category' );
+                    if ( !empty($terms) ) : if ( !is_wp_error($terms) ) :
+                    ?>
+                    <?php foreach( $terms as $term ) : ?>
+                    <h1 class='sidebar_phone-size_slide-member-manager'><?php echo $term->name; ?></h1>
+                    <?php endforeach; ?>
+                    <?php endif; endif; ?>
+                    <h2 class='sidebar_phone-size_slide-member-name'><?php the_title(); ?></h2>
+                    </a>
+                  </li>
+                  <?php endwhile;endif; ?>
+                  <div class='sidebar_phone-size_slide-member-show'>
+                    <a href='http://localhost:8888/wordpress/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC/'>
+                      <span class='sidebar_phone-size_slide-member-show-content'>すべてのLOGZメンバーを見る</span>
+                      <i class='fa fa-angle-right'></i>
+                    </a>
+                  </div>
+                </ul>
+              </div>
+              <div class='sidebar_phone-size_slide-title'>Category</div>
+              <?php wp_nav_menu(array('theme_location' => 'sidebar-category'));?>
+              <div class='sidebar_phone-size_slide-title'>Other</div>
+              <div class='sidebar_phone-size_slide-other'>
+                <?php wp_nav_menu(array('theme_location' => 'sidebar-other'));?>
+              </div>
+              <div class='sidebar_phone-size_slide-title-advertisment'>
+                <ul class='sidebar_phone-size_slide-advertisment_wide'>
+                  <li class='sidebar_phone-size_slide-advertisment-all'>
+                    <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280"/></a>
+                  </li>
+                </ul>
+              </div>
+              <a href="<? echo home_url();?>">
+              <img class='sidebar_phone-size_slide-mini-rooton' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/rooton-1.png'>
+              <img class='sidebar_phone-size_slide-mini-text' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/CANo38AUwAEQ8o9.png'>
+              </a>
+              <div class='sidebar_phone-size_slide-dummy'>
+                <!-- CloseBtn -->
+                <li class='sidebar_phone-size_slide-item'>
+                  <a class='btnClose' href='/'>CLOSE</a>
+                </li>
+              </div>
+            </nav>
+            <a href="<? echo home_url();?>" class="navbar-brand">
+            <img class='header_navbar-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc.png'>
+            </a>
           </div>
-          <div class='sidebar_phone-size_slide-title'>Category</div>
-          <?php wp_nav_menu(array('theme_location' => 'sidebar-category'));?>
-          <div class='sidebar_phone-size_slide-title'>Other</div>
-          <div class='sidebar_phone-size_slide-other'>
-            <?php wp_nav_menu(array('theme_location' => 'sidebar-other'));?>
+          <div class='collapse navbar-collapse' id='menu-header'>
+            <?php wp_nav_menu(array('theme_location' => 'header'));?>
           </div>
-          <div class='sidebar_phone-size_slide-title-advertisment'>
-            <ul class='sidebar_phone-size_slide-advertisment_wide'>
-              <li class='sidebar_phone-size_slide-advertisment-all'>
-                <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280"/></a>
-              </li>
-            </ul>
-          </div>
-          <a href="<? echo home_url();?>">
-          <img class='sidebar_phone-size_slide-mini-rooton' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/rooton-1.png'>
-          <img class='sidebar_phone-size_slide-mini-text' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/CANo38AUwAEQ8o9.png'>
-          </a>
-          <div class='sidebar_phone-size_slide-dummy'>
-            <!-- CloseBtn -->
-            <li class='sidebar_phone-size_slide-item'>
-              <a class='btnClose' href='/'>CLOSE</a>
-            </li>
-          </div>
-        </nav>
-        <a href="<? echo home_url();?>" class="navbar-brand">
-        <img class='header_navbar-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc.png'>
-        </a>
+        </div>
+      </nav>
+      <?php if(have_posts()): while(have_posts()): the_post(); ?>
+      <?php if(is_first()): ?>
+      <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280" class="content_top-img"/></a>
+      <?php
+      $cats = get_the_category();
+      $cats = $cats[0];
+      ?>
+      <div id="content_category-bar" class="content_category-bar<?php echo $cats->category_nicename; ?> <?php if ( is_home() ) { echo 'current'; } ?>">
+      <?php wp_nav_menu(array('theme_location' => 'top-category'));?>
       </div>
-      <div class='collapse navbar-collapse' id='menu-header'>
-        <?php wp_nav_menu(array('theme_location' => 'header'));?>
-      </div>
-    </div>
-  </nav>
-  <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280" class="content_top-img"/></a>
-  <div id='content_category-bar'>
-    <!-- / 施工中 -->
-  </div>
-</header>
+      <?php endif; ?>
+      <?php endwhile; endif; ?>
+    </header>
+  </head>
+</html>
 <!-- content -->
 <!-- / content -->
 <div id='content'>
@@ -277,58 +250,31 @@
         <article class='sidebar_article-member'>
           <div class='sidebar_article-member_main'></div>
           <div class='sidebar_article-member_other row'>
+            <?php
+            $loop = new WP_Query(array("post_type" => "members"));
+            if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
+            ?>
             <div class='member_other-all col-md-4'>
-              <a href='/'>
-                <p class='member_other-all-img-frame'>
-                  <img class='member_other-all-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                </p>
-                <h1 class='member_other-all-manager'>代表取締役</h1>
-                <h2 class='member_other-all-name'>ああああああああああ</h2>
+              <a href="<?php echo get_permalink(); ?>">
+              <p class='member_other-all-img-frame'>
+                <?php the_post_thumbnail('thumbnail', array( 'class' => 'member_other-all-img' )); ?>
+              </p>
+              <?php
+              $terms = get_the_terms( get_the_ID(), 'members_category' );
+              if ( !empty($terms) ) : if ( !is_wp_error($terms) ) :
+              ?>
+              <?php foreach( $terms as $term ) : ?>
+              <h1 class='member_other-all-manager'><?php echo $term->name; ?></h1>
+              <?php endforeach; ?>
+              <?php endif; endif; ?>
+              <h2 class='member_other-all-name'><?php the_title(); ?></h2>
               </a>
             </div>
-            <div class='member_other-all col-md-4'>
-              <a href='/'>
-                <p class='member_other-all-img-frame'>
-                  <img class='member_other-all-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                </p>
-                <h1 class='member_other-all-manager'>代表取締役</h1>
-                <h2 class='member_other-all-name'>ああああああああああ</h2>
-              </a>
-            </div>
-            <div class='member_other-all col-md-4'>
-              <a href='/'>
-                <p class='member_other-all-img-frame'>
-                  <img class='member_other-all-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                </p>
-                <h1 class='member_other-all-manager'>代表取締役</h1>
-                <h2 class='member_other-all-name'>ああああああああああ</h2>
-              </a>
-            </div>
-            <div class='member_other-all col-md-4'>
-              <a href='/'>
-                <p class='member_other-all-img-frame'>
-                  <img class='member_other-all-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                </p>
-                <h1 class='member_other-all-manager'>代表取締役</h1>
-                <h2 class='member_other-all-name'>ああああああああああ</h2>
-              </a>
-            </div>
-            <div class='member_other-all col-md-4'>
-              <a href='/'>
-                <p class='member_other-all-img-frame'>
-                  <img class='member_other-all-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                </p>
-                <h1 class='member_other-all-manager'>代表取締役</h1>
-                <h2 class='member_other-all-name'>ああああああああああ</h2>
-              </a>
-            </div>
-            <div class='member_other-all col-md-4'>
-              <a href='/'>
-                <p class='member_other-all-img-frame'>
-                  <img class='member_other-all-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5094-1.jpg'>
-                </p>
-                <h1 class='member_other-all-manager'>代表取締役</h1>
-                <h2 class='member_other-all-name'>ああああああああああ</h2>
+            <?php endwhile;endif; ?>
+            <div class='member_other-all-show'>
+              <a href='http://localhost:8888/wordpress/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC/'>
+                <span class='member_other-all-show-content'>すべてのLOGZメンバーを見る</span>
+                <i class='fa fa-angle-right'></i>
               </a>
             </div>
           </div>
@@ -387,7 +333,7 @@
   <div class='footer_main col-md-8 visible-lg visible-md'>
     <ul class='row'>
       <li class='col-md-4'>
-        <p class='footer_title'>title</p>
+        <p class='footer_title'>ABOUT US</p>
         <?php wp_nav_menu(array(
         'theme_location' => 'footer-left',
         )); ?>
@@ -410,9 +356,9 @@
   <div class='footer_bottom row visible-lg visible-md'>
     <div class='footer_bottom-center'>
       <div class='footer_bottom-left col-lg-6'>
-        <a class='footer_bottom-link' href='/'>
-          <!-- company name img -->
-          <img class='footer_bottom-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc-white.png'>
+        <a href="<? echo home_url();?>" class="footer_bottom-link">
+        <!-- company name img -->
+        <img class='footer_bottom-img' src='http://localhost:8888/wordpress/wp-content/uploads/2016/02/logz_inc-white.png'>
         </a>
         <!-- address -->
         <div class='footer_bottom-address'>
@@ -422,17 +368,7 @@
       </div>
       <!-- buttom -->
       <div class='footer_bottom-right col-lg-6'>
-        <ul class='footer_bottom-right-list visible-lg visible-md'>
-          <li class='footer_bottom-right-item'>
-            <a href='/'>プライバシーポリシー</a>
-          </li>
-          <li class='footer_bottom-right-item'>
-            <a href='/'>メディア・広告掲載について</a>
-          </li>
-          <li class='footer_bottom-right-item'>
-            <a href='/'>サイトマップ</a>
-          </li>
-        </ul>
+        <?php wp_nav_menu(array('theme_location' => 'sidebar-other'));?>
         <copyright class='footer_bottom-right-copyright'>&copy 2015-2016 LOGZ,Inc.</copyright>
       </div>
     </div>
@@ -448,3 +384,55 @@
     <copyright class='footer_bottom-right-copyright_mini'>&copy 2015-2016 LOGZ,Inc.</copyright>
   </div>
 </footer>
+<script>
+  $(function() {
+  $('#menu-home-top-category').slick({
+  infinite: false,
+  dots:false,
+  slidesToShow: 6,
+  slidesToScroll: 4,
+  responsive: [{
+  breakpoint: 768,
+  settings: {
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  }
+  },{
+  breakpoint: 480,
+  settings: {
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  }
+  }
+  ]
+  });
+  });
+</script>
+<script>
+  $(function() {
+  $('#members-main-img-mini').slick({
+  infinite: false,
+  dots:false,
+  slidesToShow: 6,
+  slidesToScroll: 4,
+  responsive: [{
+  breakpoint: 768,
+  settings: {
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  }
+  },{
+  breakpoint: 480,
+  settings: {
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  }
+  }
+  ]
+  });
+  });
+</script>

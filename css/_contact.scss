@@ -1,0 +1,58 @@
+.menu-contact-container{
+  #menu-contact{
+    width: 100%;
+    float: none;
+    display: inline-block;
+    border:{
+      top: 4px solid $logz-color;
+      left: 4px solid $logz-color;
+      right: 4px solid $logz-color;
+    }
+    .menu-item{
+      width: 50%;
+      text-align: center;
+      border-bottom: 4px solid $logz-color;
+      @media screen and (max-width: 767px){
+        float: left;
+      }
+      &:nth-child(2n+1){
+        border-right: 4px solid $logz-color;
+      }
+      a{
+        text-align: center;
+        padding: 0;
+        display: inline-block;
+        padding: 35px 15px;
+        width: 100%;
+        transition: .3s ease-out;
+        vertical-align: middle;
+        @media screen and (max-width: 767px){
+          padding: 17.5px 7.5px;
+        }
+        &:hover{
+          background-color: $logz-color;
+          color: $white;
+          transition: .3s ease;
+        }
+        span{
+          float: left;
+          clear: both;
+          width: 100%;
+          font-size: 1.5rem;
+          margin-top: 13px;
+          @media screen and (max-width: 767px){
+            font-size: 0.7rem;
+          }
+        }
+        i{
+          float: left;
+          width: 100%;
+          font-size: 4rem;
+          @media screen and (max-width: 767px){
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}

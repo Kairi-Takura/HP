@@ -1,0 +1,146 @@
+.recruit_main{
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 40px;
+  .recruit_main-heading{
+    margin: 0 auto;
+    display: table;
+    margin-bottom: 30px;
+
+    .recruit_main-heading-img{
+      padding: 10px;
+      height: 253.333px;
+      width: 380px;
+      overflow: hidden;
+      position: relative;
+      @media screen and (max-width: 875px){
+        float: inherit;
+        padding: 10px 0;
+        &:first-child{
+          margin-bottom: 15px;
+        }
+      }
+      @media screen and (max-width: 420px){
+        float: inherit;
+        height: 213.333px;
+        width: 320px;
+      }
+      a{
+        transition: .5s;
+        &:hover{
+          opacity: 0.7;
+          transition: .5s;
+        }
+        img{
+          max-width: 100%;
+          height: auto;
+        }
+        .recruit_main-heading-img-caption{
+          position: absolute;
+          bottom: 0;
+          left: 10px;
+          background-color: rgba(#000,0.7);
+          z-index: 1;
+          width: 360px;
+          height: 55px;
+          text-align: center;
+          line-height: 55px;
+          font-size: 1.3rem;
+          letter-spacing: 1px;
+          @media screen and (max-width: 875px){
+            width: 380px;
+            left: 0;
+          }
+          @media screen and (max-width: 420px){
+            width: 320px;
+          }
+          span{
+            color: $white;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .recruit-main-content_page-title_mini{
+    display: none;
+    @media screen and (max-width: 768px){
+      background-color: $logz-color;
+      color: $white;
+      display: inherit;
+      margin-bottom: 15px;
+      width: 100%;
+      padding: 3px 15px 3px;
+      line-height: 2.45;
+      letter-spacing: normal;
+      vertical-align: top;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  .recruit-main-content{
+    .btn{
+      border: 2px solid $logz-color;
+      height: 45px;
+      line-height: 33px;
+      &:hover{
+        background-color: $logz-color;
+        transition: .5s;
+      }
+      &:hover a{
+        color: $white;
+      }
+      a{
+        color: $logz-color;
+        font-size: 1.2rem;
+        @media screen and (max-width: 768px){
+          font-size: 1.0rem;
+        }
+      }
+    }
+    .recruit-main-content-list{
+      margin-bottom: 30px;
+      .recruit-main-content-item{
+        height: 110px;
+        line-height: 110px;
+        border:{
+          bottom: 1px solid rgba($logz-color,0.4);
+          top: 1px solid rgba($logz-color,0.4);
+        }
+        transition: .8s ease-out;
+        @media screen and (max-width: 768px){
+          height: 80px;
+          line-height: 80px;
+        }
+        &:hover{
+          background-color: $logz-color;
+          transition: .3s ease-in;
+        }
+        a{
+          display: block;
+          font-size: 1.3rem;
+          width: 95%;
+          margin: 0 auto;
+          @media screen and (max-width: 768px){
+            font-size: 1.1rem;
+          }
+          &:hover{
+            text-decoration: none;
+            color: $white;
+          }
+          i{
+            font-size: 2rem;
+            vertical-align: middle;
+            margin-right: 10px;
+            @media screen and (max-width: 768px){
+              font-size: 1.3rem;
+            }
+          }
+          span{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}

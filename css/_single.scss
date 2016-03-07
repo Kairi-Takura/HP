@@ -1,4 +1,4 @@
-.single{
+.single-post{
   #content_main{
     padding: 0 15px 0 15px;
   }
@@ -29,6 +29,10 @@
       }
       .single_article-content{
         margin-top: 25px;
+        display: inline-block;
+        #padSection{
+          display: inline-block;
+        }
         p{
           img{
             max-width: 100%;

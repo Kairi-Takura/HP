@@ -1,4 +1,5 @@
 footer{
+  clear: both;
   height: 340px;
   padding-bottom: 100px;
   margin-right: 0 !important;
@@ -105,26 +106,28 @@ footer{
       margin-top: 10px;
       float: right;
       width: 520px;
-      .footer_bottom-right-list{
-        width: 520px;
-        .footer_bottom-right-item{
-          float: left;
-          margin-left: 10px;
-          &:first-child{
-            margin-left: 0;
-          }
-          a{
-            color: $white;
-            border: 1px solid $white;
-            padding: 3px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            transition: .8s ease;
-            &:hover{
-              background-color: $white;
-              color: $logz-color;
-              text-decoration: none;
-              transition: .5s ease;
+      .menu-sidebar-other-container{
+        #menu-sidebar-other-1{
+          width: 520px;
+          .menu-item{
+            float: left;
+            margin-left: 10px;
+            &:first-child{
+              margin-left: 0;
+            }
+            a{
+              color: $white;
+              border: 1px solid $white;
+              padding: 3px;
+              border-radius: 5px;
+              font-size: 0.8rem;
+              transition: .8s ease;
+              &:hover{
+                background-color: $white;
+                color: $logz-color;
+                text-decoration: none;
+                transition: .5s ease;
+              }
             }
           }
         }

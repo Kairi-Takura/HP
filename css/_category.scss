@@ -1,0 +1,23 @@
+#content_all{
+  #content_main{
+    .category-title{
+      width: 100%;
+      height: 45px;
+      line-height: 45px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $white;
+      background-color: rgba($white,0.2);
+      @media screen and (max-width: 991px){
+        display: none;
+      }
+      i{
+        margin: 0 20px;
+        font-size: 1.5rem;
+        vertical-align: top;
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import "header";
+.page-template-members{
+  #content{
+    #members_main{
+      .members-block{
+        .members-block-list{
+          display: inline-block;
+          width: 100%;
+          .members-block-item{
+            float: left;
+            width: 20%;
+            text-align: center;
+            display: inline-block;
+            padding: 30px 0;
+            @media screen and (max-width: 991px){
+              width: 25%;
+            }
+            @media screen and (max-width: 768px){
+              width: 33.3333%;
+            }
+            @media screen and (max-width: 500px){
+              width: 50%;
+              padding: 5px;
+            }
+            .members-block_article{
+              padding: 5px;
+              a{
+                display: block;
+                &:hover, &:active, &:focus{
+                  text-decoration: none;
+                }
+                &:hover .members-block_article-thumb, &:active .members-block_article-thumb, &:focus .members-block_article-thumb{
+                  transform: rotate(1440deg);
+                  opacity: 0;
+                }
+                &:hover .members-block_article-content, &:active .members-block_article-content, &:focus .members-block_article-content{
+                  color: $white;
+                  background-color: $logz-color;
+                  box-shadow: 2px 2px 2px 2px rgba($white,0.8);
+                  transition: .3s ease-in;
+                  &::after{
+                    background-color: $white;
+                    box-shadow: 1px 1px 1px 1px rgba($white,0.1) inset;
+                  }
+                  &::before{
+                    background-color: $white;
+                    box-shadow: 1px 1px 1px 1px rgba($white,0.1) inset;
+                  }
+                }
+                .members-block_article-all{
+                  position: relative;
+                  .members-block_article-info{
+                    .members-block_article-img{
+                      width: 100%;
+                      height: auto;
+                      vertical-align: middle;
+                      border-radius: 100%;
+                    }
+                  }
+                  .members-block_article-frame{
+                    width: 100%;
+                    height: 100%;
+                    .members-block_article-thumb{
+                      width: 100%;
+                      height: 100%;
+                      vertical-align: middle;
+                      border-radius: 100%;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      transition: .6s;
+                    }
+                  }
+                }
+                .members-block_article-content{
+                  position: relative;
+                  color: $logz-color;
+                  background-color: $white;
+                  border: 4px;
+                  box-shadow: 2px 2px 2px 2px rgba($logz-color,0.8);
+                  padding: 5px;
+                  border-radius: 10px;
+                  transition: 1s ease-out;
+                  &::after{
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    background-color: $logz-color;
+                    box-shadow: 1px 1px 1px 1px rgba($logz-color,0.8) inset;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: 5px;
+                    right: 7px;
+                  }
+                  &::before{
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    background-color: $logz-color;
+                    box-shadow: 1px 1px 1px 1px rgba($logz-color,0.8) inset;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: 5px;
+                    left: 7px;
+                  }
+                  .members-block_article-content-officer{
+                    margin-top: 10px;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                    @media screen and (max-width: 500px){
+                      font-size: 0.75rem;
+                    }
+                  }
+                  .members-block_article-content-name{
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    margin-top: 10px;
+                    @media screen and (max-width: 500px){
+                      font-size: 1.0rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

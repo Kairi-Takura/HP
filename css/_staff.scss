@@ -1,0 +1,211 @@
+#staff_main{
+  #staff_section{
+    margin-bottom: 40px;
+    .staff_article{
+      padding: 40px 0;
+      border-bottom: 1px solid $logz-color;
+      &:first-child{
+        padding-top: 0;
+      }
+      .staff_article-all{
+        height: 450px;
+        width: 100%;
+        overflow: hidden;
+        .staff_article-img{
+          width: 320px;
+          height: 450px;
+          overflow: hidden;
+          float: left;
+          border-radius: 5px;
+          img{
+            width: 100%;
+            height: auto;
+            min-height: 450px;
+          }
+        }
+        .staff_article-content{
+          float: left;
+          width: 419px;
+          text-align: center;
+          margin: 0 20px;
+          max-height: 450px;
+          overflow: hidden;
+          .staff_article-content_header-frame{
+            // border: 1px solid $logz-color;
+            box-shadow: 0 3px 0 rgba($logz-color, 0.3);
+            height: 190px;
+            padding: 44px 0 0;
+            margin-bottom: 41px;
+            .staff_article-content_header-name_k{
+              font-size: 2.0rem;
+              color: $logz-color;
+              font-weight: bold;
+              margin-bottom: 15px;
+            }
+            .staff_article-content_header-name_l{
+              font-size: 1.1rem;
+              margin-bottom: 27px;
+              color: rgba($logz-color, 0.8);
+              letter-spacing: 1px;
+            }
+            .staff_article-content_header-social{
+              a{
+                font-size: 1.6rem;
+                &:hover{
+                  text-decoration: none;
+                }
+                &:hover .fa-twitter, &:hover .fa-facebook{
+                  border-bottom: 2px solid $logz-color;
+                }
+                .fa-twitter{
+                   color: #41b7d8;
+                   margin-right: 4px;
+                }
+                .fa-facebook{
+                  color: #3b5997;
+                  margin-left: 4px;
+                }
+              }
+            }
+          }
+          .staff_article-content_content-frame{
+            display: inline-block;
+            padding-bottom: 30px;
+            border-bottom: 1px dotted $logz-color;
+            margin-bottom: 33px;
+            .staff_article-content_content-officer{
+              font-size: 1.1rem;
+              font-weight: bold;
+              margin-bottom: 15px;
+              color: $logz-color;
+            }
+            .staff_article-content_content-birth{
+              font-size: 1rem;
+              color: $logz-color;
+            }
+          }
+          .staff_article-content_content-text{
+            line-height: 2.15;
+            text-align: left;
+            font-size: 1.0rem;
+          }
+        }
+      }
+    }
+  }
+  #staff_section_mini{
+    margin-bottom: 20px;
+    .staff_article_mini{
+      padding: 20px 0;
+      border-bottom: 1px solid $logz-color;
+      @media screen and (min-width: 610px){
+        float: left;
+        padding-top: 0;
+        padding-bottom: 20px;
+        width: 50%;
+        margin-bottom: 20px;
+      }
+      &:first-child{
+        padding-top: 0;
+      }
+      .staff_article-all_mini{
+        .staff_article-img_mini{
+          width: 281px;
+          height: 395.5px;
+          margin: 0 auto;
+          position: relative;
+          img{
+            min-height: 395.5px;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+          }
+          .staff_article-content_header-name_k_mini{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba($logz-color,0.6);
+            color: $white;
+            font-size: 1.5rem;
+            padding: 8px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          .staff_article-content_header-name_l_mini{
+            position: absolute;
+            bottom: 42px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba($logz-color,0.6);
+            color: $white;
+            font-size: 1rem;
+            padding-top: 8px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+        }
+        .staff_article-content_mini{
+          text-align: center;
+          color: $logz-color;
+          border: 1px solid $logz-color;
+          padding:0 8px;
+          border-radius: 5px;
+          width: 281px;
+          margin: 0 auto;
+          .staff_article-content_content-frame_mini{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid $logz-color;
+            .staff_article-content_content-officer_mini{
+              margin-bottom: 2.5px;
+            }
+            .staff_article-content_content-birth_mini{
+              font-size: 0.9rem;
+            }
+          }
+          .staff_article-content_content-text_mini{
+            color: #000;
+            padding: 10px 0;
+          }
+          .staff_article-content_header-frame_mini{
+            display: inline-block;
+            width: 100%;
+            .staff_article-content_header-social_mini{
+              width: 100%;
+              margin-bottom: 5px;
+              border-bottom: 1px solid $logz-color;
+              a{
+                font-size: 1.3rem;
+                &:active .fa-twitter, &:focus .fa-twitter{
+                  color: $white;
+                  background-color: #41b7d8;
+                }
+                &:active .fa-facebook, &:focus .fa-facebook{
+                  color: $white;
+                  background-color: #3b5997;
+                }
+                i{
+                  width: 50%;
+                  float: left;
+                  border-radius: 5px;
+                }
+                .fa-twitter{
+                  color: #41b7d8;
+                  border: 3px solid #41b7d8;
+                  padding: 3.5px;
+                }
+                .fa-facebook{
+                  color :#3b5997;
+                  border: 3px solid #3b5997;
+                  padding: 3.5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -9,18 +9,47 @@
 @import "footer";
 
 // perts
-// _single
+// _single ブログの個別記事
 @import "single";
-// _sidebar-single
+// _sidebar-single ブログの個別記事のサイドバー
 @import "sidebar-single";
+// _members メンバー
+@import "members";
+@import "single-members";
+// info menu
+@import "sidebar-page";
+// _company 会社概要
+@import "company";
+// _works 制作実績
+@import "works";
+// _staff 役員紹介
+@import "staff";
+// _recruit 採用情報
+@import "recruit";
+@import "recruit-ques";
+@import "recruit-mid-career";
+// _message 代表挨拶
+@import "message";
+// _contact お問い合わせ
+@import "contact";
+@import "contact-other";
+// _privacy
+@import "privacy";
+// _category カテゴリー
+@import "category";
 
 // _bootstrap
 @import "bootstrap";
 // _reset
 @import "reset";
+// _slick
+@import "slick";
+@import "slick-theme";
 // _mixin.scss
 @import "mixin";
 
 
 // Fonts
+@import url(https://fonts.googleapis.com/css?family=Handlee);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
