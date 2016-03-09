@@ -33,7 +33,7 @@
               <div class="recruit_main-heading row">
                 <div class="recruit_main-heading-img col-sm-6 col-xs-12">
                   <a href="http://localhost:8888/wordpress/%E4%B8%AD%E9%80%94%E6%8E%A1%E7%94%A8%E8%81%B7%E7%A8%AE%E4%B8%80%E8%A6%A7/">
-                    <img src="http://localhost:8888/wordpress/wp-content/uploads/2016/03/CcHMIaZVAAAw3CC-e1457157946184.jpg"/>
+                    <img src="http://localhost:8888/wordpress/wp-content/uploads/2016/03/Image11-e1457445248833.jpg"/>
                     <figcaption class="recruit_main-heading-img-caption">
                       <span>中途採用職種一覧</span>
                     </figcaption>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="recruit_main-heading-img col-sm-6 col-xs-12">
                   <a href="#">
-                    <img src="http://localhost:8888/wordpress/wp-content/uploads/2016/03/CcHMIaZVAAAw3CC-e1457157946184.jpg"/>
+                    <img src="http://localhost:8888/wordpress/wp-content/uploads/2016/03/comingsoon-563x353.jpg"/>
                     <figcaption class="recruit_main-heading-img-caption">
                       <span>新卒採用</span>
                     </figcaption>

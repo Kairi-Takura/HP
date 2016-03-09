@@ -30,11 +30,72 @@
           <article id='single_article'>
             <div class='single_article-all ~works~'>
             <!-- /singleのここは使い回し -->
-
               <!-- works start -->
               <div id="works_main">
                 <section id="works_section" class="row">
-
+                  <article class="single-works-main">
+                    <div class="single-works-main-heading">
+                      <?php
+                      $terms = get_the_terms( get_the_ID(), 'works_category' );
+                      if ( !empty($terms) ) : if ( !is_wp_error($terms) ) :
+                      ?>
+                      <?php foreach( $terms as $term ) : ?>
+                      <span class="single-works-main-category"><?php echo $term->name; ?></span>
+                      <?php endforeach; ?>
+                      <?php endif; endif; ?>
+                      <time datetime="<?php echo get_post_meta($post->ID, 'release', true); ?>" class="single-works-main-time"><?php echo get_post_meta($post->ID, 'release', true); ?> Released</time>
+                      <h1 class="single-works-main-title"><?php the_title(); ?></h1>
+                      <p class="single-works-main-description"><?php echo get_post_meta($post->ID, 'what', true); ?></p>
+                      <div class="single-works-main-img">
+                        <?php the_post_thumbnail('lsize'); ?>
+                      </div>
+                    </div>
+                    <div class="single-works-main-content">
+                      <div class="single-works-main-content-heading">
+                        <?php the_content(); ?>
+                      </div>
+                      <div class="single-works-main-content-info">
+                        <div class="single-works-main-content-info-left">
+                          <dl class="text-data">
+                            <dt class="text-data-heading">
+                              Client
+                            </dt>
+                            <dd class="text-data-content">
+                              <?php echo get_post_meta($post->ID, 'name', true); ?>
+                            </dd>
+                          </dl>
+                          <dl class="text-data">
+                            <dt class="text-data-heading">
+                              URL
+                            </dt>
+                            <dd class="text-data-content">
+                              <i class="fa fa-external-link"></i>
+                              <a href="<?php echo get_post_meta($post->ID, 'url', true); ?>" class="single-works-main-info-left-data"><?php echo get_post_meta($post->ID, 'url', true); ?></a>
+                            </dd>
+                          </dl>
+                          <dl class="text-data">
+                            <dt class="text-data-heading">
+                              Devices
+                            </dt>
+                            <dd class="text-data-content">
+                              <?php echo get_post_meta($post->ID, 'device', true); ?>
+                            </dd>
+                          </dl>
+                        </div>
+                        <div class="single-works-main-content-info-right hidden-xs">
+                          thinking...
+                        </div>
+                        <div class="question">
+                          <div class="question-content">
+                            <a href="<?php echo get_post_meta($post->ID, 'url', true); ?>">
+                              <i class="fa fa-external-link"></i>
+                              このサイトを見る
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
                 </section>
               </div>
 

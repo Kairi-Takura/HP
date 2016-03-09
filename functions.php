@@ -1,5 +1,35 @@
 <?php
 
+// privacy
+add_action('init', 'add_privacy_post_type');
+function add_privacy_post_type() {
+    $params = array(
+            'labels' => array(
+                    'name' => 'プライバシーポリシー',
+                    'singular_name' => 'プライバシーポリシー',
+                    'add_new' => 'プライバシーポリシー追加',
+                    'add_new_item' => 'プライバシーポリシーを新規追加',
+                    'edit_item' => 'プライバシーポリシー内容を編集する',
+                    'new_item' => '新規サイト',
+                    'all_items' => 'プライバシーポリシー一覧',
+                    'view_item' => 'プライバシーポリシーの説明を見る',
+                    'search_items' => '検索する',
+                    'not_found' => 'プライバシーポリシーが見つかりませんでした。',
+                    'not_found_in_trash' => 'ゴミ箱内にプライバシーポリシーが見つかりませんでした。'
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                    'title',
+                    'editor',
+                    'author',
+                    'custom-fields',
+										'thumbnail', // アイキャッチ画像
+            ),
+    );
+    register_post_type('privacy', $params);
+}
+
 // recruit ques
 add_action('init', 'add_recruit_ques_post_type');
 function add_recruit_ques_post_type() {
@@ -407,7 +437,6 @@ set_post_thumbnail_size(210, 210);
 
 // Mサイズ
 add_image_size('msize', 400, 400);
-
 // Sサイズ
 add_image_size('ssize', 300, 200, true);
 

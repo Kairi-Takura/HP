@@ -89,10 +89,12 @@
       }
       &:hover a{
         color: $white;
+        transition: .3s ease-in;
       }
       a{
         color: $logz-color;
         font-size: 1.2rem;
+        transition: .8s ease-out;
         @media screen and (max-width: 768px){
           font-size: 1.0rem;
         }

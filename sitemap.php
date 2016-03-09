@@ -1,5 +1,5 @@
 <?php
-// Template Name: プライバシー・ポリシー
+// Template Name: サイトマップ
 ?>
 <?php get_header(); ?>
 <!-- content -->
@@ -14,7 +14,7 @@
         </li>
         <li class="other-bar-item">
           <i class="fa fa-chevron-right"></i>
-          <span>プライバシー・ポリシー</span>
+          <span>サイトマップ</span>
         </li>
       </ol>
     </div>
@@ -26,24 +26,10 @@
         <article id='single_article'>
           <div class='single_article-all ~privacy~'>
           <!-- /singleのここは使い回し -->
-            <h1 class="page-title">プライバシー・ポリシー</h1>
+            <h1 class="page-title">サイトマップ</h1>
 
             <!-- privacy start -->
-            <div class="privacy_main">
-              <ul class="privacy-list">
-                <?php
-                $loop = new WP_Query(array("post_type" => "privacy"));
-                if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
-                ?>
-                <li class="privacy-item">
-                  <h2 class="privacy-item-title">
-                    <?php the_title(); ?>
-                  </h2>
-                  <?php the_content(); ?>
-                </li>
-                <?php endwhile;endif; ?>
-              </ul>
-            </div>
+            <?php the_content(); ?>
             <!-- /privacy start -->
 
             <div class="sidebar-page-menu_mini hidden-lg hidden-md">

@@ -428,8 +428,10 @@
   breakpoint: 480,
   settings: {
   arrows: false,
-  slidesToShow: 3,
+  slidesToShow: 2,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
   }
   }
   ]

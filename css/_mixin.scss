@@ -214,6 +214,16 @@ $welfare: #fc8d00;
   @include body-setting;
   background-image: url("");
 }
+// Recruit ques 採用についてよくある質問
+.page-template-recruit-ques{
+  @include body-setting;
+  background-image: url("");
+}
+// Recruit mid career 中途採用職種一覧
+.page-template-recruit_mid_career{
+  @include body-setting;
+  background-image: url("");
+}
 // Privacy page プライバシー・ポリシー
 .page-template-privacy{
   @include body-setting;
@@ -812,5 +822,18 @@ a.feedly-balloon-btn-horizontal-link{background-color:#94be61;}
       text-decoration: none;
       transition: .5s;
     }
+  }
+}
+
+.text-data{
+  margin-bottom: 41px;
+  color: $logz-color;
+  .text-data-heading{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+  .text-data-content{
+
   }
 }

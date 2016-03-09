@@ -45,7 +45,7 @@
                   <dl class="recruit-ques-main-item-frame">
                     <dt class="recruit-ques-main-item-q">
                       <div class="recruit-ques-main-item-th">
-                        <span class="recruit-ques-main-item-th-icon">Q</span>
+                        <span class="recruit-ques-main-item-th-icon">Q.</span>
                       </div>
                       <div class="recruit-ques-main-item-td">
                         <p class="recruit-ques-main-item-td-content"><?php the_title(); ?></p>
@@ -53,7 +53,7 @@
                     </dt>
                     <dd class="recruit-ques-main-item-a">
                       <div class="recruit-ques-main-item-th">
-                        <span class="recruit-ques-main-item-th-icon"><i class="fa fa-adn"></i></span>
+                        <span class="recruit-ques-main-item-th-icon"><i class="fa fa-adn"></i>.</span>
                       </div>
                       <div class="recruit-ques-main-item-td">
                         <div class="recruit-ques-main-item-td-content"><?php the_content(); ?></div>

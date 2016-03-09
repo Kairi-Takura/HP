@@ -64,9 +64,9 @@
                         <?php endif; endif; ?>
                         <li class="staff_article-content_content-birth"><?php echo get_post_meta($post->ID, 'birth', true); ?></li>
                       </ul>
-                      <p class="staff_article-content_content-text">
+                      <div class="staff_article-content_content-text">
                         <?php the_content(); ?>
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </article>

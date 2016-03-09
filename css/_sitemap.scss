@@ -1,0 +1,20 @@
+#sitemap_list{
+  border:{
+    top: 1px solid $logz-color;
+    left: 1px solid $logz-color;
+    right: 1px solid $logz-color;
+  }
+  display: inline-block;
+  width: 100%;
+  .page_item{
+    width: 50%;
+    display: inline;
+    float: left;
+    text-align: center;
+    a{
+      display: block;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}

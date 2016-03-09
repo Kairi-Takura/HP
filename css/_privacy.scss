@@ -1,0 +1,24 @@
+.privacy_main{
+  .privacy-list{
+    .privacy-item{
+          padding: 33px 0 40px;
+      border-bottom: 1px solid $logz-color;
+      margin-bottom: 40px;
+      color: $logz-color;
+      &:last-child{
+        border: none;
+        margin: 0;
+      }
+      .privacy-item-title{
+      border-left: 1px solid $logz-color;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      }
+      p{
+        line-height: 25px;
+      }
+    }
+  }
+}
