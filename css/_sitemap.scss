@@ -11,10 +11,30 @@
     display: inline;
     float: left;
     text-align: center;
+    border-bottom: 1px solid $logz-color;
+    @media screen and (max-width: 768px){
+      width: 100%;
+      &:nth-child(2n+1){
+        border-right: none;
+      }
+    }
+    &:nth-child(2n+1){
+      border-right: 1px solid $logz-color;
+      @media screen and (max-width: 768px){
+          border-right: none;
+      }
+    }
     a{
       display: block;
-      height: 30px;
-      line-height: 30px;
+      height: 40px;
+      line-height: 40px;
+      transition: .8s;
+      &:hover{
+        transition: .3s;
+        text-decoration: none;
+        background-color: $logz-color;
+        color: $white;
+      }
     }
   }
 }

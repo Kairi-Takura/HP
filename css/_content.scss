@@ -354,3 +354,96 @@
     }
   }
 }
+.next-page{
+  a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+    border: $logz-color 2px solid;
+    height: 50px;
+    font-size: 1.4rem;
+    line-height: 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transition: .8s ease-out;
+    span{
+
+    }
+    i{
+      float: right;
+      line-height: 46px;
+      font-size: 2rem;
+      margin-right: 15px;
+    }
+    &:hover{
+      text-decoration: none;
+      color: $white;
+      background-color: $logz-color;
+      transition: .3s ease;
+    }
+  }
+}
+.wp-pagenavi{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  @media screen and (max-width: 991px){
+    margin: 15px 0;
+  }
+  a{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 rgba($white,0.3);
+    width: 40px;
+    letter-spacing: normal;
+    font-size: 1.4rem;
+    margin: 0 5.5px;
+    vertical-align: middle;
+    color: $logz-color;
+    border: 1px solid $logz-color;
+    background-color: $white;
+    transition: .8s ease-out;
+    &:hover{
+      transition: .3s ease-in;
+      text-decoration: none;
+      background-color: $logz-color;
+      color: $white;
+      box-shadow: 0 3px 0 rgba($logz-color,0.3);
+    }
+  }
+  .pages{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 rgba($white,0.3);
+    letter-spacing: normal;
+    font-size: 1.4rem;
+    margin: 0 5.5px;
+    vertical-align: middle;
+    color: $logz-color;
+    border: 1px solid $logz-color;
+    background-color: $white;
+    padding: 0 8px;
+  }
+  .current{
+    color: #fff;
+    background: $logz-color;
+    border: 0;
+    box-shadow: 0 3px 0 rgba($logz-color,0.3);
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    width: 40px;
+    letter-spacing: normal;
+    font-size: 1.4rem;
+    margin: 0 5.5px;
+    vertical-align: middle;
+  }
+}

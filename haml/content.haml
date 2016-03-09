@@ -7,8 +7,8 @@
   %div#content_all.row
     %div#content_main.col-md-8.col-sm-12
       %section#content_section.visible-lg.visible-md
-        <?php query_posts('posts_per_page=1') ?>
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        <?php if (is_first()) :?>
         %article.content_article.content_article-first
           <a href="<?php echo get_permalink(); ?>">
           %div.content_article-all.content_article-all-first
@@ -36,10 +36,9 @@
             %figcaption.content_article-overlay
               // Maybe...
           </a>
-        <?php endwhile; endif; ?>
+        <?php else: ?>
 
-        <?php query_posts('posts_per_page=18&offset=1');?>
-        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        <?php query_posts($query_string .'offset=1');?>
         %article.content_article.content_article-other
           <a href="<?php echo get_permalink(); ?>">
           %div.content_article-all.content_article-all-half
@@ -66,10 +65,18 @@
               %div.content_article-warp
             %figcaption.content_article-overlay.content_article-overlay-half
           </a>
+        <?php wp_reset_query(); ?>
+        <?php endif; ?>
         <?php endwhile; endif; ?>
 
+        %div.next-page
+          <?php posts_nav_link( '', '', '<span>次の記事一覧を見る</span><i class="fa fa-angle-right"></i>' ); ?>
+
+        <?php if(function_exists('wp_pagenavi')) {
+        wp_pagenavi();
+        } ?>
+
       %section#content_section.visible-xs.visible-sm
-        <?php query_posts('posts_per_page=18') ?>
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
         %article.content_article.content_article_mini
           <a href="<?php echo get_permalink(); ?>">
@@ -97,6 +104,9 @@
               %h1.content_article-title_mini <?php the_title(); ?>
           </a>
         <?php endwhile; endif; ?>
+        <?php if(function_exists('wp_pagenavi')) {
+        wp_pagenavi();
+        } ?>
 
     / sidebar
-    = Haml::Engine.new(File.read("sidebar.haml")).render
+    <?php get_sidebar(); ?>

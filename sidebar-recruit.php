@@ -1,40 +1,9 @@
-<!-- sidebar -->
 <div class='col-md-4 hidden-xs hidden-sm' id='sidebar'>
   <section id='sidebar_section'>
-    <!-- / Members -->
-    <h1 class='sidebar_article-member_title'>メンバー</h1>
-    <article class='sidebar_article-member'>
-      <div class='sidebar_article-member_main'></div>
-      <div class='sidebar_article-member_other row'>
-        <?php
-        $loop = new WP_Query(array("post_type" => "members"));
-        if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
-        ?>
-        <div class='member_other-all col-md-4'>
-          <a href="<?php echo get_permalink(); ?>">
-          <p class='member_other-all-img-frame'>
-            <?php the_post_thumbnail('thumbnail', array( 'class' => 'member_other-all-img' )); ?>
-          </p>
-          <?php
-          $terms = get_the_terms( get_the_ID(), 'members_category' );
-          if ( !empty($terms) ) : if ( !is_wp_error($terms) ) :
-          ?>
-          <?php foreach( $terms as $term ) : ?>
-          <h1 class='member_other-all-manager'><?php echo $term->name; ?></h1>
-          <?php endforeach; ?>
-          <?php endif; endif; ?>
-          <h2 class='member_other-all-name'><?php the_title(); ?></h2>
-          </a>
-        </div>
-        <?php endwhile;endif; ?>
-        <div class='member_other-all-show'>
-          <a href='http://localhost:8888/wordpress/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC/'>
-            <span class='member_other-all-show-content'>すべてのLOGZメンバーを見る</span>
-            <i class='fa fa-angle-right'></i>
-          </a>
-        </div>
-      </div>
-    </article>
+    <!--  sidebar-page -->
+    <h1 class='sidebar_article-member_title'>採用情報</h1>
+    <?php wp_nav_menu(array('theme_location' => 'sidebar-recruit'));?>
+
     <!-- / Recommended -->
     <h1 class='sidebar_article-member_title'>おすすめの記事</h1>
     <article class='sidebar_article-recommended'>
@@ -66,14 +35,15 @@
                   <h1 class='content_article-title_mini'><?php the_title(); ?></h1>
                 </div>
               </div>
+            </a>
             </article>
             <?php endwhile; endif; ?>
           </section>
         </div>
       </div>
     </article>
-    <!-- Advertisement (Wide) -->
-    <!-- Advertisement (Narrow　300*250) -->
+
+    <!-- Advertisement-->
     <article class='sidebar_article-advertisement_narrow'>
       <div class='sidebar_article-advertisement_narrow-all'>
         <?php

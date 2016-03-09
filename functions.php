@@ -1,5 +1,35 @@
 <?php
 
+// advertisement
+add_action('init', 'add_advertisement_post_type');
+function add_advertisement_post_type() {
+    $params = array(
+            'labels' => array(
+                    'name' => '広告',
+                    'singular_name' => '広告',
+                    'add_new' => '広告追加',
+                    'add_new_item' => '広告を新規追加',
+                    'edit_item' => '広告内容を編集する',
+                    'new_item' => '新規サイト',
+                    'all_items' => '広告一覧',
+                    'view_item' => '広告の説明を見る',
+                    'search_items' => '検索する',
+                    'not_found' => '広告が見つかりませんでした。',
+                    'not_found_in_trash' => 'ゴミ箱内に広告が見つかりませんでした。'
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                    'title',
+                    'editor',
+                    'author',
+                    'custom-fields',
+										'thumbnail', // アイキャッチ画像
+            ),
+    );
+    register_post_type('advertisement', $params);
+}
+
 // privacy
 add_action('init', 'add_privacy_post_type');
 function add_privacy_post_type() {
@@ -522,10 +552,9 @@ if ( ! function_exists( 'pietergoosen_pagination' ) ) :
 
 endif;
 
-
 function is_first(){
-    global $wp_query;
-    return ($wp_query -> current_post === 0);
+  global $wp_query;
+  return ($wp_query->current_post === 0);
 }
 
  ?>

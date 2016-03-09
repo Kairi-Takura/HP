@@ -12,12 +12,10 @@
       color: $logz-color;
       border-bottom: 3px solid $logz-color;
       padding-bottom: 5px;
-      margin:{
-        bottom: 10px;
-        top: 30px;
-      }
+      margin-bottom: 15px;
+      margin-top: 30px;
       &:first-child{
-        margin-top: 15px;
+        margin-top: 10px;
       }
     }
     .sidebar_article-member{
@@ -143,9 +141,10 @@
         }
       }
     }
-    // .sidebar_article-recommended{
-    // }
     .sidebar_article-advertisement_narrow{
+      display: inline-block;
+      width: 100%;
+        margin-top: 50px;
       a{
         transition: .5s ease-out;
         &:hover{
@@ -155,7 +154,6 @@
         img{
           max-width: 100%;
           height: auto;
-          border-radius: 5px;
           margin-top: 10px;
           margin-bottom: 10px;
         }

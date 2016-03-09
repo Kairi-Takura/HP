@@ -27,6 +27,71 @@
             font-size:1.2rem;
           }
       }
+      .single_table-title{
+        background-color: #4087c7;
+        color: $white;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      .single_table-list{
+        margin: 0;
+        width: 100%;
+        border-top: $logz-color 1px solid;
+        .single_table-item-left{
+          border-left: 1px solid $logz-color;
+          padding: 20px 0 37px 20px !important;
+        }
+        .single_table-item{
+          padding: 0;
+          border-bottom: 1px solid $logz-color;
+          padding: 20px 0 37px 0 !important;
+          transition: .8s ease-out;
+          &:hover{
+            background-color: rgba($logz-color,0.25);
+            transition: .3s ease-in;
+          }
+          &:hover img{
+            transform: scale(1.1);
+            transition: .25s;
+          }
+          a{
+            display: block;
+            .single_table-item-all{
+              margin: 0;
+              .single_table-item-img{
+                padding: 0 5px;
+                height: 104.286px;
+                overflow: hidden;
+                img{
+                  max-width: 100%;
+                  height: auto;
+                  min-height: 104.286px;
+                  transition: .8s ease-out;
+                }
+              }
+              .single_table-item-content{
+                padding: 0 5px;
+                color: $logz-color;
+                time{
+                  font-weight: normal;
+                  font-size: 0.9rem;
+                }
+                .single_table-item-content-text{
+                  margin: 0;
+                  height: 20px;
+                  font-size: 1rem;
+                  margin-top: 5px;
+                  padding-bottom: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
       .single_article-content{
         margin-top: 25px;
         display: inline-block;

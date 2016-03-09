@@ -26,12 +26,14 @@ $welfare: #fc8d00;
   color: $fun;
 }
 // content_category-barのborder-bottom
-.content_category-barfun{
-  border-bottom: 4px solid $fun;
-  .menu-item-225, .category-titlefun{
-    background-color: $fun;
-    a{
-      color: $white !important;
+.category-fun{
+  .content_category-bar{
+    border-bottom: 4px solid $fun;
+    .menu-item-225, .category-titlefun{
+      background-color: $fun;
+      a{
+        color: $white !important;
+      }
     }
   }
 }
@@ -39,21 +41,6 @@ $welfare: #fc8d00;
 .menu-item-225{
   &:hover{
     background-color: rgba($fun,0.8)
-  }
-}
-// homeでの色を消す
-.home{
-  #menu-item-225{
-    background-color: inherit;
-    &:hover{
-      background-color: rgba($fun,0.8)
-    }
-    a{
-      color: $logz-color !important;
-      &:hover{
-        color: $white !important;
-      }
-    }
   }
 }
 .education, .cate-education, .cat-item-5{
@@ -70,13 +57,15 @@ $welfare: #fc8d00;
   border: 2px solid $education;
   color: $education;
 }
-// content_category-barのborder-bottom
-.content_category-bareducation, .category-titleeducation{
-  border-bottom: 4px solid $education;
-  .menu-item-226{
-    background-color: $education;
-    a{
-      color: $white !important;
+.category-education{
+  // content_category-barのborder-bottom
+  .content_category-bar{
+    border-bottom: 4px solid $education;
+    .menu-item-226{
+      background-color: $education;
+      a{
+        color: $white !important;
+      }
     }
   }
 }
@@ -101,17 +90,19 @@ $welfare: #fc8d00;
   color: $welfare;
 }
 // content_category-barのborder-bottom
-.content_category-barwelfare{
-  border-bottom: 4px solid $welfare;
-  .menu-item-227{
-    background-color: $welfare;
-    a{
-      color: $white !important;
+.category-welfare{
+  .content_category-bar{
+    border-bottom: 4px solid $welfare;
+    .menu-item-227{
+      background-color: $welfare;
+      a{
+        color: $white !important;
+      }
     }
   }
 }
 // category-barの色
-.menu-item-227, .category-titlewelfare{
+.menu-item-227{
   &:hover{
     background-color: rgba($welfare,0.8)
   }
@@ -119,8 +110,7 @@ $welfare: #fc8d00;
 // all　すべて
 // single-member category color
 // category color
-.current{
-  border-bottom: 4px solid $logz-color;
+.home{
   .menu-item-229{
     background-color: $logz-color;
     a{
@@ -128,12 +118,45 @@ $welfare: #fc8d00;
     }
   }
 }
+.content_category-barcurrent{
+  border-bottom: 4px solid $logz-color;
+}
 .cate-all, .cat-item-1{
   display: none;
 }
 .menu-item-229{
   &:hover{
     background-color: rgba($logz-color,0.8)
+  }
+}
+//singleの時のborder color設定
+.single{
+  .content_category-barwelfare{
+    border-bottom: 4px solid $welfare;
+    .menu-item-227{
+      background-color: $welfare;
+      a{
+        color: $white !important;
+      }
+    }
+  }
+  .content_category-barfun{
+    border-bottom: 4px solid $fun;
+    .menu-item-225{
+      background-color: $fun;
+      a{
+        color: $white !important;
+      }
+    }
+  }
+  .content_category-bareducation{
+    border-bottom: 4px solid $education;
+    .menu-item-226{
+      background-color: $education;
+      a{
+        color: $white !important;
+      }
+    }
   }
 }
 

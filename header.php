@@ -86,7 +86,12 @@
               <div class='sidebar_phone-size_slide-title-advertisment'>
                 <ul class='sidebar_phone-size_slide-advertisment_wide'>
                   <li class='sidebar_phone-size_slide-advertisment-all'>
-                    <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280"/></a>
+                    <?php
+                    $loop = new WP_Query(array("post_type" => "advertisement"));
+                    if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
+                    ?>
+                    <?php the_content();?>
+                    <?php endwhile; endif; ?>
                   </li>
                 </ul>
               </div>
@@ -117,7 +122,7 @@
       $cats = get_the_category();
       $cats = $cats[0];
       ?>
-      <div id="content_category-bar" class="content_category-bar<?php echo $cats->category_nicename; ?> <?php if ( is_home() ) { echo 'current'; } ?>">
+      <div id="content_category-bar" class="content_category-bar content_category-bar<?php echo $cats->category_nicename; ?> content_category-bar<?php if ( is_home() ) { echo 'current'; } ?>">
       <?php wp_nav_menu(array('theme_location' => 'top-category'));?>
       </div>
       <?php endif; ?>

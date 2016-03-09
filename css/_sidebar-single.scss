@@ -2,6 +2,11 @@
   .sidebar-single-title{
     padding-top: 20px;
   }
+  .sidebar-single_frame{
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+  }
   // singleのときの.sidebar_article-recommendedのpadding0
   .sidebar-single_content_main{
     padding: 0 !important;

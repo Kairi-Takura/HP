@@ -273,6 +273,18 @@ header{
     .sidebar_phone-size_slide-title-advertisment{
       border-bottom: 1px solid $white;
       margin: 5px 0;
+      .sidebar_phone-size_slide-advertisment_wide{
+        .sidebar_phone-size_slide-advertisment-all{
+          p{
+            margin: 15px 0;
+            a{
+              img{
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
     }
     .sidebar_phone-size_slide-title{
       height: 50px;

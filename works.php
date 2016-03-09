@@ -141,8 +141,13 @@
           <!-- Advertisement (Narrow　300*250) -->
           <article class='sidebar_article-advertisement_narrow'>
             <div class='sidebar_article-advertisement_narrow-all'>
+              <?php
+              $loop = new WP_Query(array("post_type" => "advertisement"));
+              if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
+              ?>
+              <?php the_content();?>
+              <?php endwhile; endif; ?>
             </div>
-            <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280" class="content_top-img"/></a>
           </article>
         </section>
       </div>

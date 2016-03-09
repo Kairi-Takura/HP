@@ -1,45 +1,34 @@
-<!-- sidebar -->
 <div class='col-md-4 hidden-xs hidden-sm' id='sidebar'>
   <section id='sidebar_section'>
-    <!-- / Members -->
-    <h1 class='sidebar_article-member_title'>メンバー</h1>
-    <article class='sidebar_article-member'>
-      <div class='sidebar_article-member_main'></div>
-      <div class='sidebar_article-member_other row'>
+    <!-- Category -->
+    <article class='sidebar-single_frame'>
+      <h1 class='sidebar_article-member_title'>カテゴリー</h1>
+      <ul class='cat-list'>
+        <?php wp_list_categories('title_li=&depth=1'); ?>
+      </ul>
+    </article>
+    <!-- Tags -->
+    <article class='sidebar-single_frame'>
+      <h1 class='sidebar_article-member_title'>タグで見る</h1>
+      <ul class='sidebar-single_tag-list'>
         <?php
-        $loop = new WP_Query(array("post_type" => "members"));
-        if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
+        $args = array(
+        'orderby' => 'count',
+        'order' => 'desc',
+        'number' => 10
+        );
+        $tags = get_terms('post_tag', $args);
+        foreach($tags as $value) {
+        echo '<li><a href="'. get_tag_link($value->term_id) .'" class="sidebar-single_tag-item">'. $value->name .'</a></li>';
+        }
         ?>
-        <div class='member_other-all col-md-4'>
-          <a href="<?php echo get_permalink(); ?>">
-          <p class='member_other-all-img-frame'>
-            <?php the_post_thumbnail('thumbnail', array( 'class' => 'member_other-all-img' )); ?>
-          </p>
-          <?php
-          $terms = get_the_terms( get_the_ID(), 'members_category' );
-          if ( !empty($terms) ) : if ( !is_wp_error($terms) ) :
-          ?>
-          <?php foreach( $terms as $term ) : ?>
-          <h1 class='member_other-all-manager'><?php echo $term->name; ?></h1>
-          <?php endforeach; ?>
-          <?php endif; endif; ?>
-          <h2 class='member_other-all-name'><?php the_title(); ?></h2>
-          </a>
-        </div>
-        <?php endwhile;endif; ?>
-        <div class='member_other-all-show'>
-          <a href='http://localhost:8888/wordpress/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC/'>
-            <span class='member_other-all-show-content'>すべてのLOGZメンバーを見る</span>
-            <i class='fa fa-angle-right'></i>
-          </a>
-        </div>
-      </div>
+      </ul>
     </article>
     <!-- / Recommended -->
-    <h1 class='sidebar_article-member_title'>おすすめの記事</h1>
-    <article class='sidebar_article-recommended'>
+    <article class='sidebar-single_frame'>
+      <h1 class='sidebar_article-member_title'>おすすめの記事</h1>
       <div id='content'>
-        <div class='sidebar_article-content' id='content_main'>
+        <div class='sidebar_article-content sidebar-single_content_main' id='content_main'>
           <section id='content_section'>
             <?php query_posts('posts_per_page=5&orderby=rand') ?>
             <?php if(have_posts()): while(have_posts()): the_post(); ?>
@@ -66,14 +55,14 @@
                   <h1 class='content_article-title_mini'><?php the_title(); ?></h1>
                 </div>
               </div>
+              </a>
             </article>
             <?php endwhile; endif; ?>
           </section>
         </div>
       </div>
     </article>
-    <!-- Advertisement (Wide) -->
-    <!-- Advertisement (Narrow　300*250) -->
+    <!-- / Advertisment -->
     <article class='sidebar_article-advertisement_narrow'>
       <div class='sidebar_article-advertisement_narrow-all'>
         <?php
