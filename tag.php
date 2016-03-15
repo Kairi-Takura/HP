@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <!-- / content -->
+<!-- / content -->
 <div id='content'>
   <p id='page-top'>
     <a href='#wrap'>
@@ -8,18 +9,14 @@
   </p>
   <div class='row' id='content_all'>
     <div class='col-md-8 col-sm-12' id='content_main'>
-      <?php if(have_posts()): while(have_posts()): the_post(); ?>
-      <?php if(is_first()): ?>
-      <?php
-      $cats = get_the_category();
-      $cats = $cats[0];
-      ?>
-      <h2 class="category-title category-title<?php echo $cats->category_nicename; ?>"><i class="<?php echo $cats->category_nicename; ?>"></i><?php single_cat_title(); ?></h2>
-      <?php endif; ?>
-      <?php endwhile; endif; ?>
       <section class='visible-lg visible-md' id='content_section'>
-        <?php query_posts('posts_per_page=1') ?>
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        <?php if (is_first()) :?>
+          <?php
+          $cats = get_the_category();
+          $cats = $cats[0];
+          ?>
+          <h2 class="category-title category-title<?php echo $cats->category_nicename; ?>"><i class="<?php echo $cats->category_nicename; ?>"></i><?php single_cat_title(); ?>の記事一覧</h2>
         <article class='content_article content_article-first'>
           <a href="<?php echo get_permalink(); ?>">
           <div class='content_article-all content_article-all-first'>
@@ -52,9 +49,8 @@
           </div>
           </a>
         </article>
-        <?php endwhile; endif; ?>
-        <?php query_posts('posts_per_page=18&offset=1');?>
-        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        <?php else: ?>
+        <?php query_posts($query_string .'offset=1');?>
         <article class='content_article content_article-other'>
           <a href="<?php echo get_permalink(); ?>">
           <div class='content_article-all content_article-all-half'>
@@ -85,10 +81,17 @@
           </div>
           </a>
         </article>
+        <?php wp_reset_query(); ?>
+        <?php endif; ?>
         <?php endwhile; endif; ?>
+        <div class='next-page'>
+          <?php posts_nav_link( '', '', '<span>次の記事一覧を見る</span><i class="fa fa-angle-right"></i>' ); ?>
+        </div>
+        <?php if(function_exists('wp_pagenavi')) {
+        wp_pagenavi();
+        } ?>
       </section>
       <section class='visible-xs visible-sm' id='content_section'>
-        <?php query_posts('posts_per_page=18') ?>
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
         <article class='content_article content_article_mini'>
           <a href="<?php echo get_permalink(); ?>">
@@ -121,10 +124,24 @@
           </a>
         </article>
         <?php endwhile; endif; ?>
+        <?php if(function_exists('wp_pagenavi')) {
+        wp_pagenavi();
+        } ?>
       </section>
+      <div id="content-social" class="row">
+      <div id="twitter" class="col-md-6 col-xs-12">
+      <a class="twitter-timeline" href="https://twitter.com/progroot" data-widget-id="709282795131052032">@progrootさんのツイート</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+      <div id="facebook" class="col-md-6 col-xs-12">
+      <div class="fb-page" data-href="https://www.facebook.com/root0901/" data-tabs="timeline" data-width="400" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/root0901/"><a href="https://www.facebook.com/root0901/">実践型プログラミングスクールroot</a></blockquote></div></div>
+      </div>
+      </div>
     </div>
-    <?php get_sidebar('category'); ?>
+    <!-- sidebar -->
+    <?php get_sidebar(); ?>
   </div>
 </div>
+
 
 <?php get_footer(); ?>

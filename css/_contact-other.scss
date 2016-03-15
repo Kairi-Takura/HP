@@ -21,12 +21,16 @@
         border-bottom: 1px solid $logz-color;
     }
   }
+  .contact-common-form, .contact-main-form{
+    text-align: center;
+  }
   .contact-all{
     display: table;
     table-layout: fixed;
     border-bottom: 1px dotted rgba($logz-color,0.6);
     @media screen and (max-width: 991px){
-      display: block;
+      display: inline-block;
+      width: 100%;
     }
     &:last-child{
       border-bottom: none;
@@ -39,17 +43,53 @@
         margin: 0 auto;
         padding: 17.5px 7.5px 10px 20px;
       }
+      @media screen and (max-width: 768px){
+        margin: 0 auto;
+        padding: 8.25px 3.55px 5px 10px;
+      }
+      label{
+        font-weight: normal;
+        cursor: pointer;
+        .contact-all-th-tag{
+          font-size: 0.8rem;
+          color: #ffffff;
+          background-color: #f44522;
+          padding: 2px 5px;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+      }
     }
     .contact-all-td{
       display: table-cell;
       vertical-align: middle;
       width: 100%;
       padding: 20px 39px 20px 0;
+      text-align: left;
+      p{
+        float: left;
+      }
+      .checkbox-874, .checkbox-67{
+        .wpcf7-checkbox{
+          .wpcf7-list-item{
+            float: left;
+            clear: both;
+            input{
+              width: 50px;
+            }
+          }
+        }
+      }
       @media screen and (max-width: 991px){
         margin: 0 auto;
         width: 320px;
         display: inherit;
+        text-align: center;
         padding: 10px 19.5px 10px 0px;
+      }
+      .wpcf7-form-control-wrap{
+        display: inline-block;
+        width: 100%;
       }
     }
     .contact-all-td, .contact-all-th{
@@ -92,17 +132,22 @@
     }
   }
   .wpcf7-form-control{
-    height: 40px;
+    min-height: 40px;
     font-size: 1.1rem;
     width: 310px;
     margin: 0 auto;
+    float: left;
   }
-  .contact-all-td-caution{
+  .wpcf7-not-valid-tip{
     font-size: 0.9rem;
     color: red;
+    float: left;
+    clear: both;
   }
   .contact-all-td-ex{
     font-size: 0.8rem;
+    float: left;
+    clear: both;
     i{
       background-color: #f1f1f1;
       padding: 0 5px;
@@ -111,10 +156,21 @@
     }
   }
 }
+.contact-privacy{
+  margin: 0 auto;
+  width: 50%;
+  padding: 50px 0 20px 0;
+  @media screen and (max-width: 768px){
+    width: 80%;
+  }
+  a{
+    width: 100%;
+  }
+}
 .contact-submit{
   margin: 0 auto;
   width: 310px;
-  padding: 50px;
+  padding: 0 50px 50px 50px;
   .wpcf7-submit{
     width: 100%;
     padding: 10px;
@@ -122,5 +178,19 @@
       background-color: $logz-color;
       color: $white;
     }
+  }
+}
+.screen-reader-response, .wpcf7-response-output{
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  color: red;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 30px;
+  display: inline-block;
+  width: 100%;
+  ul{
+    display: none;
   }
 }

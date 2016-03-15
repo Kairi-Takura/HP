@@ -16,7 +16,10 @@
       .single_article-info{
         margin-bottom: 20px;
         .single_article-date-text{
-          font-size: 1.1rem;
+          font-size: 1.4rem;
+          @media screen and (max-width: 767px){
+            font-size: 1.1rem;
+          }
         }
       }
         .single_article-title-text{
@@ -40,14 +43,14 @@
       .single_table-list{
         margin: 0;
         width: 100%;
-        border-top: $logz-color 1px solid;
+        border-top: rgba($logz-color,0.5) 1px solid;
         .single_table-item-left{
-          border-left: 1px solid $logz-color;
+          border-left: 1px solid rgba($logz-color,0.5);
           padding: 20px 0 37px 20px !important;
         }
         .single_table-item{
           padding: 0;
-          border-bottom: 1px solid $logz-color;
+          border-bottom: 1px solid rgba($logz-color,0.5);
           padding: 20px 0 37px 0 !important;
           transition: .8s ease-out;
           &:hover{
@@ -56,7 +59,7 @@
           }
           &:hover img{
             transform: scale(1.1);
-            transition: .25s;
+            transition: .1s;
           }
           a{
             display: block;

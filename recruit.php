@@ -40,7 +40,7 @@
                   </a>
                 </div>
                 <div class="recruit_main-heading-img col-sm-6 col-xs-12">
-                  <a href="#">
+                  <a href="">
                     <img src="http://localhost:8888/wordpress/wp-content/uploads/2016/03/comingsoon-563x353.jpg"/>
                     <figcaption class="recruit_main-heading-img-caption">
                       <span>新卒採用</span>

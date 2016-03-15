@@ -1,5 +1,5 @@
 <?php
-// Template Name: 制作依頼・お見積り
+// Template Name: その他お問い合わせ
 ?>
 <?php get_header(); ?>
 
@@ -20,7 +20,7 @@
         </li>
         <li class="other-bar-item">
           <i class="fa fa-chevron-right"></i>
-          <span>制作依頼・お見積り</span>
+          <span>その他お問い合わせ</span>
         </li>
       </ol>
     </div>
@@ -28,7 +28,7 @@
   <div id="content_all" class="contact-other_all">
     <div id="members_main">
       <div class="collect-all">
-        <?php echo do_shortcode( '[contact-form-7 id="279" title="制作依頼・お見積り"]' ); ?>
+        <?php echo do_shortcode( '[contact-form-7 id="288" title="その他お問い合わせ"]' ); ?>
       </div>
     </div>
   </div>

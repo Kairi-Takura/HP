@@ -1,0 +1,39 @@
+.recruit-ques-main-item-td-content{
+  display: table;
+  padding: 10px 0;
+  @media screen and (max-width: 768px){
+    text-align: justify;
+    padding: 0;
+  }
+  tbody{
+    tr{
+      &:first-child{
+        border-top: 1px solid $logz-color;
+      }
+      border-bottom: 1px solid $logz-color;
+      th{
+        width: 130px;
+        vertical-align: middle;
+        @media screen and (max-width: 768px){
+          width: 77px;
+        }
+      }
+      td{
+        display: table-cell;
+        line-height: 25px;
+        padding: 20px;
+        @media screen and (max-width: 768px){
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+.single-recruit_mid_career{
+  .recruit-ques-main-item-th{
+    @media screen and (max-width: 768px){
+      display: none;
+    }
+  }
+}

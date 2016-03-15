@@ -22,7 +22,9 @@
       </li>
     </ul>
   </div>
-  <div class='footer_sub col-md4 visible-lg visible-lg visible-md'></div>
+  <div class='col-md-4 footer_sub visible-lg visible-md'>
+    <?php echo do_shortcode( '[contact-form-7 id="313" title="投函"]' ); ?>
+  </div>
   <div class='footer_bottom row visible-lg visible-md'>
     <div class='footer_bottom-center'>
       <div class='footer_bottom-left col-lg-6'>
@@ -83,7 +85,7 @@
 <script>
   $(function() {
   $('#members-main-img-mini').slick({
-  infinite: false,
+  infinite: true,
   dots:false,
   slidesToShow: 6,
   slidesToScroll: 4,

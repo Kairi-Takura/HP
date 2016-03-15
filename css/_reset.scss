@@ -90,7 +90,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-input, textarea{
+input, textarea,select{
   border: 1px solid #e1e1e1;
   border-radius: 5px;
   box-sizing: border-box;
@@ -100,6 +100,9 @@ input, textarea{
   transition: box-shadow 0.2s, background 0.2s;
   padding: 0 15px;
   &:focus{
-    box-shadow: 0 2px 0 rgba($logz-color, 1);
+    box-shadow: 1px 1px 1px 1px rgba($logz-color, 0.3) inset;
+    border: 2px solid rgba($logz-color,0.5);
+    -webkit-transition: box-shadow 0.2s, background 0.2s;
+    transition: box-shadow 0.2s, background 0.2s;
   }
 }

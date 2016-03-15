@@ -50,7 +50,7 @@
         $loop = new WP_Query(array("post_type" => "advertisement"));
         if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
         ?>
-        <?php the_content();?>
+        <a href="<?php echo get_post_meta($post->ID, 'link', true); ?>" target="_blank"><?php the_content();?></a>
         <?php endwhile; endif; ?>
       </div>
     </article>

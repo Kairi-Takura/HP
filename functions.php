@@ -1,5 +1,67 @@
 <?php
 
+// ヘッダー
+add_action('init', 'add_header_post_type');
+function add_header_post_type() {
+    $params = array(
+            'labels' => array(
+                    'name' => 'ヘッダー',
+                    'singular_name' => 'ヘッダー',
+                    'add_new' => 'ヘッダー追加',
+                    'add_new_item' => 'ヘッダーを新規追加',
+                    'edit_item' => 'ヘッダー内容を編集する',
+                    'new_item' => '新規サイト',
+                    'all_items' => 'ヘッダー一覧',
+                    'view_item' => 'ヘッダーの説明を見る',
+                    'search_items' => '検索する',
+                    'not_found' => 'ヘッダーが見つかりませんでした。',
+                    'not_found_in_trash' => 'ゴミ箱内にヘッダーが見つかりませんでした。'
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                    'excerpt',
+                    'title',
+                    'editor',
+                    'author',
+                    'custom-fields',
+										'thumbnail', // アイキャッチ画像
+            ),
+    );
+    register_post_type('header', $params);
+}
+
+// 中途採用職種一覧
+add_action('init', 'add_recruit_mid_career_post_type');
+function add_recruit_mid_career_post_type() {
+    $params = array(
+            'labels' => array(
+                    'name' => '中途採用職種一覧',
+                    'singular_name' => '中途採用職種一覧',
+                    'add_new' => '中途採用職種一覧追加',
+                    'add_new_item' => '中途採用職種一覧を新規追加',
+                    'edit_item' => '中途採用職種一覧内容を編集する',
+                    'new_item' => '新規サイト',
+                    'all_items' => '中途採用職種一覧一覧',
+                    'view_item' => '中途採用職種一覧の説明を見る',
+                    'search_items' => '検索する',
+                    'not_found' => '中途採用職種一覧が見つかりませんでした。',
+                    'not_found_in_trash' => 'ゴミ箱内に中途採用職種一覧が見つかりませんでした。'
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                    'excerpt',
+                    'title',
+                    'editor',
+                    'author',
+                    'custom-fields',
+										'thumbnail', // アイキャッチ画像
+            ),
+    );
+    register_post_type('recruit_mid_career', $params);
+}
+
 // advertisement
 add_action('init', 'add_advertisement_post_type');
 function add_advertisement_post_type() {

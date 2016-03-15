@@ -26,9 +26,11 @@
         <article id='single_article'>
           <div class='single_article-all ~privacy~'>
           <!-- /singleのここは使い回し -->
+          <?php if(have_posts()): while(have_posts()): the_post(); ?>
             <h1 class="page-title">サイトマップ</h1>
 
             <?php the_content(); ?>
+            <?php endwhile; endif; ?>
             <div class="question">
               <div class="question-content">
                 <p class="question-content-title">

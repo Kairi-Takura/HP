@@ -25,6 +25,14 @@
     <!-- Title -->
     <title>プログラミングスクールを運営する会社のブログ| LOGZ,inc.</title>
     <body <?php body_class(); ?>>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=851721568286826";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <!-- / header -->
     <header>
       <h1 class='header_description'><?php bloginfo('description'); ?></h1>
@@ -50,7 +58,7 @@
               <div class='sidebar_phone-size_slide-member'>
                 <ul class='sidebar_phone-size_slide-member-list row'>
                   <?php
-                  $loop = new WP_Query(array("post_type" => "members"));
+                  $loop = new WP_Query(array("post_type" => "members", 'orderby' => 'rand'));
                   if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
                   ?>
                   <li class='sidebar_phone-size_slide-member-item col-xs-4'>
@@ -91,7 +99,7 @@
                     $loop = new WP_Query(array("post_type" => "advertisement"));
                     if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
                     ?>
-                    <?php the_content();?>
+                    <a href="<?php echo get_post_meta($post->ID, 'link', true); ?>" target="_blank"><?php the_content();?></a>
                     <?php endwhile; endif; ?>
                   </li>
                 </ul>
@@ -116,9 +124,14 @@
           </div>
         </div>
       </nav>
+      <?php
+      $loop = new WP_Query(array("post_type" => "header"));
+      if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
+      ?>
+      <a href="<?php echo get_post_meta($post->ID, 'link', true); ?>"><?php the_content();?></a>
+      <?php endwhile; endif; ?>
       <?php if(have_posts()): while(have_posts()): the_post(); ?>
       <?php if(is_first()): ?>
-      <a href="http://superceo.jp/book/company/i60107/#!3" target="_blank"><img src="http://superceo.jp/book/company/i60107/bnr/i60107.jpg" alt="次世代経営者のCEOスタイルマガジンSUPERCEOで当社特集掲載中" width="1900" height="280" class="content_top-img"/></a>
       <?php
       $cats = get_the_category();
       $cats = $cats[0];
@@ -255,6 +268,15 @@
         wp_pagenavi();
         } ?>
       </section>
+      <div id="content-social" class="row">
+      <div id="twitter" class="col-md-6 col-xs-12">
+      <a class="twitter-timeline" href="https://twitter.com/progroot" data-widget-id="709282795131052032">@progrootさんのツイート</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+      <div id="facebook" class="col-md-6 col-xs-12">
+      <div class="fb-page" data-href="https://www.facebook.com/root0901/" data-tabs="timeline" data-width="400" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/root0901/"><a href="https://www.facebook.com/root0901/">実践型プログラミングスクールroot</a></blockquote></div></div>
+      </div>
+      </div>
     </div>
     <!-- sidebar -->
     <?php get_sidebar(); ?>
@@ -285,7 +307,9 @@
       </li>
     </ul>
   </div>
-  <div class='footer_sub col-md4 visible-lg visible-lg visible-md'></div>
+  <div class='footer_sub col-md-4 visible-lg visible-lg visible-md'>
+    <?php echo do_shortcode( '[contact-form-7 id="313" title="投函"]' ); ?>
+  </div>
   <div class='footer_bottom row visible-lg visible-md'>
     <div class='footer_bottom-center'>
       <div class='footer_bottom-left col-lg-6'>

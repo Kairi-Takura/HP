@@ -35,9 +35,21 @@
             <h1 class="page-title">中途募集職種一覧</h1>
 
             <!-- recruit_mid_career start -->
-            <div class="recruit_mid_career">
-
-            </div>
+            <ul class="recruit_mid_career-list">
+              <?php
+              $loop = new WP_Query(array("post_type" => "recruit_mid_career"));
+              if ( $loop->have_posts() ) : while($loop->have_posts()): $loop->the_post();
+              ?>
+              <li class="recruit_mid_career-item">
+                <a href="<?php echo get_permalink(); ?>">
+                  <div class="recruit_mid_career-title">
+                    <?php the_title(); ?>
+                    <i class="fa fa-angle-double-right"></i>
+                  </div>
+                </a>
+              </li>
+              <?php endwhile;endif; ?>
+            </ul>
             <!-- /recruit_mid_career start -->
 
             <div class="sidebar-page-menu_mini hidden-lg hidden-md">

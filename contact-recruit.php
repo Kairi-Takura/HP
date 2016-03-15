@@ -1,5 +1,5 @@
 <?php
-// Template Name: お問い合わせ
+// Template Name: 採用について
 ?>
 <?php get_header(); ?>
 
@@ -13,18 +13,22 @@
           </a>
         </li>
         <li class="other-bar-item">
+          <a href="http://localhost:8888/wordpress/%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B/">
+            <i class="fa fa-chevron-right"></i>
+            <span>お問い合わせ</span>
+          </a>
+        </li>
+        <li class="other-bar-item">
           <i class="fa fa-chevron-right"></i>
-          <span>お問い合わせ</span>
+          <span>採用について</span>
         </li>
       </ol>
     </div>
   </div>
-  <div id="content_all">
+  <div id="content_all" class="contact-other_all">
     <div id="members_main">
-      <div class="members-block">
-        <?php wp_nav_menu(array(
-        'theme_location' => 'contact',
-        )); ?>
+      <div class="collect-all">
+        <?php echo do_shortcode( '[contact-form-7 id="309" title="採用について"]' ); ?>
       </div>
     </div>
   </div>

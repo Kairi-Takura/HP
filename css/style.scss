@@ -29,6 +29,7 @@
 @import "recruit";
 @import "recruit-ques";
 @import "recruit-mid-career";
+@import "single-recruit_mid_career";
 // _message 代表挨拶
 @import "message";
 // _contact お問い合わせ
@@ -40,6 +41,8 @@
 @import "sitemap";
 // _category カテゴリー
 @import "category";
+// _sidebar-category カテゴリーのサイドバー
+@import "sidebar-categoty";
 
 // _bootstrap
 @import "bootstrap";

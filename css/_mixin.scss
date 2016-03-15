@@ -22,7 +22,7 @@ $welfare: #fc8d00;
   border-left: 5px solid $fun;
 }
 .category-titlefun{
-  border: 2px solid $fun;
+  // border: 2px solid $fun;
   color: $fun;
 }
 // content_category-barのborder-bottom
@@ -54,7 +54,7 @@ $welfare: #fc8d00;
   border-left: 5px solid $education,;
 }
 .category-titleeducation{
-  border: 2px solid $education;
+  // border: 2px solid $education;
   color: $education;
 }
 .category-education{
@@ -86,7 +86,7 @@ $welfare: #fc8d00;
   border-left: 5px solid $welfare;
 }
 .category-titlewelfare{
-  border: 2px solid $welfare;
+  // border: 2px solid $welfare;
   color: $welfare;
 }
 // content_category-barのborder-bottom
@@ -130,7 +130,7 @@ $welfare: #fc8d00;
   }
 }
 //singleの時のborder color設定
-.single{
+.single, .tag{
   .content_category-barwelfare{
     border-bottom: 4px solid $welfare;
     .menu-item-227{
@@ -202,6 +202,11 @@ $welfare: #fc8d00;
   @include body-setting;
   background-image: url("http://localhost:8888/wordpress/wp-content/uploads/2016/02/dummy.jpg");
 }
+// Single 個別記事ページ
+.single-post{
+  @include body-setting;
+  background-image: url("");
+}
 // Members page　メンバー
 .page-template-members{
   @include body-setting;
@@ -252,6 +257,11 @@ $welfare: #fc8d00;
   @include body-setting;
   background-image: url("");
 }
+// Sitemap page サイトマップ
+.page-template-sitemap{
+  @include body-setting;
+  background-image: url("");
+}
 // Single page メンバー
 .single-members{
   @include body-setting;
@@ -259,6 +269,11 @@ $welfare: #fc8d00;
 }
 // Single page 制作実績
 .single-works{
+  @include body-setting;
+  background-image: url("");
+}
+// Contact お問い合わせ
+.page-template-collect-php, .page-template-coverage-php, .page-template-etc, .page-template-school, .page-template-training, .page-template-contact-recruit{
   @include body-setting;
   background-image: url("");
 }
@@ -274,6 +289,12 @@ $welfare: #fc8d00;
   background-image: url("");
 }
 .category-fun, .category-fun #content:before{
+  @include body-setting;
+  background-image: url("http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5195.jpg");
+}
+
+// タグ
+.tag{
   @include body-setting;
   background-image: url("http://localhost:8888/wordpress/wp-content/uploads/2016/02/IMG_5195.jpg");
 }
@@ -332,9 +353,10 @@ $xs_sm_background-color: #fff;
 
 // Other bar
 .single-members{
-  @media screen and (max-width: 992px){
-    .other-bar{
-      margin-top: -1px;
+  .other-bar{
+    margin: 0;
+    @media screen and (max-width: 992px){
+        margin-top: -1px;
     }
   }
 }
@@ -430,7 +452,7 @@ $xs_sm_background-color: #fff;
 }
 
 // Page bar hidden
-.page, .single-works{
+.page, .single-works, .single-recruit_mid_career{
   //　No Use
   #content_category-bar{
     display: none;
